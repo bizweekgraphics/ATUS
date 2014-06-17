@@ -15,6 +15,7 @@ app.directive('slider', function() {
                   scope.$apply(function() {
                     var value = $(elem).val()
                     ngModel.$setViewValue(value);
+                    scope.test()
                   })
                 })
 
