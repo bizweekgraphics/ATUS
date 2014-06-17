@@ -1,8 +1,8 @@
 app.directive('d3Bar', ['d3Service', function(d3Service) {
 
-  var margin = {top: 0, right: 0, bottom: 0, left: 0};
-  var width = 960 - margin.left - margin.right
-  var height = 500 - margin.top - margin.bottom;
+    var margin = {top: 20, right: 20, bottom: 30, left: 40}
+    var width = 960 - margin.left - margin.right
+    var height = 500 - margin.top - margin.bottom
 
   return {
     restrict: 'EA', 
@@ -55,7 +55,8 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
               .data(data)
             .enter().append("rect")
               .attr("class", "bar")
-              .attr("x", function(d) {return x(d.letter); })
+              .attr("x", function(d) {
+               return x(d.letter); })
               .attr("width", x.rangeBand())
               .attr("y", function(d) { return y(d.frequency); })
               .attr("height", function(d) { return height - y(d.frequency); });
