@@ -14,6 +14,8 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
         var x = d3.scale.ordinal()
           .rangeRoundBands([0, width], .1)
 
+        var x1 = d3.scale.ordinal()
+
         var y = d3.scale.linear()
           .domain([0, .1])
           .range([height, 0])
@@ -40,7 +42,6 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
         }, true);
 
         scope.render = function(data) {
-
           x.domain(data.map(function(d) { return d.activity; }));
           y.domain([0, 24])
 
@@ -64,10 +65,17 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
             .enter().append("rect")
               .attr("class", "bar")
               .attr("x", function(d) {
-               return x(d.activity); })
-              .attr("width", x.rangeBand())
+                var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/2
+                return xVal
+              })
+              .attr("width", function() {
+                return x.rangeBand()/2})
               .attr("y", function(d) { return y(d.hours); })
               .attr("height", function(d) { return height - y(d.hours); })
+              .style("fill", function(d) {
+                var color = d.name === "you" ? "blue" : "red"
+                return color
+              })
 
 
         }

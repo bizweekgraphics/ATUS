@@ -1,20 +1,27 @@
 app.controller('HomeCtrl', ['$scope', 'd3Service', function($scope, d3Service) {
 
   function init() {
-    $scope.test()
+    $scope.setData()
   }
 
-  $scope.personalCare = 9.49
-  $scope.eating = 1.25
-  $scope.household = 1.74
-  $scope.purchasing = 0.72
+  $scope.personalCare = 0
+  $scope.eating = 0
+  $scope.household = 0
+  $scope.purchasing = 0
 
-  $scope.test = function() {
+  $scope.setData = function() {
     $scope.testData = [
-    {activity: "Personal care activites", hours: $scope.personalCare},
-    {activity: "Eating and drinking", hours: $scope.eating},
-    {activity: "Household activities", hours: $scope.household},
-    {activity: "Purchasing goods and services", hours: $scope.purchasing}
+    {name: "you", activity: "Personal care activites", hours: $scope.personalCare},
+    {name: "you", activity: "Eating and drinking", hours: $scope.eating},
+    {name: "you", activity: "Household activities", hours: $scope.household},
+    {name: "you", activity: "Purchasing goods and services", hours: $scope.purchasing},
+    {name: "ATUS", activity: "Personal care activites", hours: 3},
+
+    {name: "ATUS", activity: "Eating and drinking", hours: 2},
+
+    {name: "ATUS", activity: "Household activities", hours: 4},
+
+    {name: "ATUS", activity: "Purchasing goods and services", hours: 6}
     ]
   }
 
