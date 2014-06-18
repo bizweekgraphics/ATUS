@@ -11,7 +11,8 @@ app.directive('slider', function() {
                     'min': 0,
                     'max': 24
                   }
-                }).change(function() {
+                }).on('slide', function() {
+                  console.log('here')
                   scope.$apply(function() {
                     var value = $(elem).val()
                     ngModel.$setViewValue(value);
