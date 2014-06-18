@@ -39,7 +39,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
       {"name":"you","activity":"Telephone calls, mail, and e-mail","hours": $scope.set10,"counter":"set1 $scope.set0"},
       {"name":"you","activity":"Other activities, not elsewhere classified","hours": $scope.set11,"counter":"set11"}
     ]
-
+    
     $scope.testData = $scope.averageData.concat($scope.personalData)
   }
 

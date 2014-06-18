@@ -1,14 +1,14 @@
 <div id="container">
   <div id="left">
-    <div ng-repeat="data in averageData.slice(0, 5)">
-      <h4>{{data.activity}}: {{data.counter}} hours</h4>
-      <div slider class="slider" counter="{{data.counter}}" ng-model="data.counter"></div>
+    <div ng-repeat="data in averageData.slice(0, 6)">
+      <h4>{{data.activity}}: {{activity}} hours</h4>
+      <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
     </div>
   </div>
   <div id="right">
-    <div ng-repeat="data in averageData.slice(6, 11)">
-      <h4>{{data.activity}}: {{data.counter}} hours</h4>
-      <div slider class="slider" counter="{{data.counter}}" ng-model="data.counter"></div>
+    <div ng-repeat="data in averageData.slice(6, 12)">
+      <h4>{{data.activity}}: {{activity}} hours</h4>
+      <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
     </div>
   </div>
   <div class="clear"></div>
