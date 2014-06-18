@@ -11,7 +11,13 @@
       "average percent women": "100.0",
       "average hours engaged total": "9.55",
       "average hours engaged men": "9.31",
-      "average hours engaged women": "9.76"
+      "average hours engaged women": "9.76",
+      "weekday": "9.30",
+      "weekend": "10.11",
+      "percent weekday": "100.0",
+      "percent weekend": "100.0",
+      "engaged weekday": "9.30",
+      "engaged weekend": "10.11"
     }
   ],
   "Eating and drinking": [
@@ -26,7 +32,13 @@
       "average percent women": "96.2",
       "average hours engaged total": "1.27",
       "average hours engaged men": "1.31",
-      "average hours engaged women": "1.24"
+      "average hours engaged women": "1.24",
+      "weekday": "1.17",
+      "weekend": "1.37",
+      "percent weekday": "96.9",
+      "percent weekend": "95.2",
+      "engaged weekday": "1.20",
+      "engaged weekend": "1.44"
     }
   ],
   "Household activities": [
@@ -41,7 +53,13 @@
       "average percent women": "83.4",
       "average hours engaged total": "2.39",
       "average hours engaged men": "2.06",
-      "average hours engaged women": "2.63"
+      "average hours engaged women": "2.63",
+      "weekday": "1.65",
+      "weekend": "2.09",
+      "percent weekday": "74.2",
+      "percent weekend": "75.3",
+      "engaged weekday": "2.22",
+      "engaged weekend": "2.77"
     }
   ],
   "Purchasing goods and services": [
@@ -56,7 +74,13 @@
       "average percent women": "46.8",
       "average hours engaged total": "1.74",
       "average hours engaged men": "1.62",
-      "average hours engaged women": "1.83"
+      "average hours engaged women": "1.83",
+      "weekday": "0.70",
+      "weekend": "0.84",
+      "percent weekday": "42.6",
+      "percent weekend": "43.7",
+      "engaged weekday": "1.66",
+      "engaged weekend": "1.93"
     }
   ],
   "Caring for and helping household members": [
@@ -71,7 +95,13 @@
       "average percent women": "30.3",
       "average hours engaged total": "2.07",
       "average hours engaged men": "1.75",
-      "average hours engaged women": "2.28"
+      "average hours engaged women": "2.28",
+      "weekday": "0.56",
+      "weekend": "0.46",
+      "percent weekday": "27.0",
+      "percent weekend": "22.2",
+      "engaged weekday": "2.08",
+      "engaged weekend": "2.07"
     }
   ],
   "Caring for and helping nonhousehold members": [
@@ -86,7 +116,13 @@
       "average percent women": "12.9",
       "average hours engaged total": "1.68",
       "average hours engaged men": "1.69",
-      "average hours engaged women": "1.68"
+      "average hours engaged women": "1.68",
+      "weekday": "0.18",
+      "weekend": "0.22",
+      "percent weekday": "10.9",
+      "percent weekend": "12.9",
+      "engaged weekday": "1.68",
+      "engaged weekend": "1.68"
     }
   ],
   "Working and work-related activities": [
@@ -101,7 +137,13 @@
       "average percent women": "37.2",
       "average hours engaged total": "8.01",
       "average hours engaged men": "8.45",
-      "average hours engaged women": "7.46"
+      "average hours engaged women": "7.46",
+      "weekday": "4.41",
+      "weekend": "1.27",
+      "percent weekday": "52.2",
+      "percent weekend": "22.6",
+      "engaged weekday": "8.46",
+      "engaged weekend": "5.63"
     }
   ],
   "Educational activities": [
@@ -116,7 +158,13 @@
       "average percent women": "8.3",
       "average hours engaged total": "5.98",
       "average hours engaged men": "6.25",
-      "average hours engaged women": "5.74"
+      "average hours engaged women": "5.74",
+      "weekday": "0.6",
+      "weekend": "0.18",
+      "percent weekday": "9.2",
+      "percent weekend": "5.2",
+      "engaged weekday": "6.59",
+      "engaged weekend": "3.50"
     }
   ],
   "Organizational, civic, and religious activities": [
@@ -131,7 +179,13 @@
       "average percent women": "16.5",
       "average hours engaged total": "2.31",
       "average hours engaged men": "2.52",
-      "average hours engaged women": "2.17"
+      "average hours engaged women": "2.17",
+      "weekday": "0.22",
+      "weekend": "0.56",
+      "percent weekday": "11.5",
+      "percent weekend": "19.9",
+      "engaged weekday": "1.94",
+      "engaged weekend": "2.79"
     }
   ],
   "Leisure and sports": [
@@ -146,7 +200,13 @@
       "average percent women": "95.4",
       "average hours engaged total": "5.52",
       "average hours engaged men": "5.89",
-      "average hours engaged women": "5.17"
+      "average hours engaged women": "5.17",
+      "weekday": "4.74",
+      "weekend": "6.46",
+      "percent weekday": "94.7",
+      "percent weekend": "96.7",
+      "engaged weekday": "5.01",
+      "engaged weekend": "6.68"
     }
   ],
   "Telephone calls, mail, and e-mail": [
@@ -161,7 +221,13 @@
       "average percent women": "25.3",
       "average hours engaged total": ".72",
       "average hours engaged men": ".64",
-      "average hours engaged women": ".77"
+      "average hours engaged women": ".77",
+      "weekday": ".16",
+      "weekend": ".13",
+      "percent weekday": "21.9",
+      "percent weekend": "17.1",
+      "engaged weekday": ".71",
+      "engaged weekend": ".75"
     }
   ],
   "Other activities, not elsewhere classified": [
@@ -175,7 +241,13 @@
       "average percent women": "19.5",
       "average hours engaged total": "1.77",
       "average hours engaged men": "1.77",
-      "average hours engaged women": "1.78"
+      "average hours engaged women": "1.78",
+      "weekday": ".31",
+      "weekend": ".31",
+      "percent weekday": "17.9",
+      "percent weekend": "16.8",
+      "engaged weekday": "1.73",
+      "engaged weekend": "1.88"
     }
   ]
 }]

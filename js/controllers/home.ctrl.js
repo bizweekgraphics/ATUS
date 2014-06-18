@@ -53,7 +53,8 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
     $scope.testData = $scope.averageData.concat($scope.personalData)
   }
 
-  $http.get('/data/data.json')
+  $scope.filterGraph = function(group) {
+    $http.get('/data/data.json')
     .then(function(res) {
       $scope.averageData = []
       $scope.personalData = []
@@ -61,10 +62,13 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
       angular.forEach(res.data[0], function(value, key) {
         var test = "set" + counter
         counter += 1
-        $scope.averageData.push({name: "ATUS", activity: key, hours: value[0]["average hours total"], counter: test, nested: value[0].nested})
+        $scope.averageData.push({name: "ATUS", activity: key, hours: value[0][group], counter: test, nested: value[0].nested})
         $scope.personalData.push({name: "you", activity: key, hours: 0, counter: test})
       })
       init()
     })
+  }
+
+  $scope.filterGraph('average hours total')
 
 }])
