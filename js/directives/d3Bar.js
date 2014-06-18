@@ -1,13 +1,14 @@
 app.directive('d3Bar', ['d3Service', function(d3Service) {
 
-    var margin = {top: 20, right: 20, bottom: 220, left: 40}
+    var margin = {top: 20, right: 20, bottom: 290, left: 40}
     var width = 970 - margin.left - margin.right
-    var height = 750 - margin.top - margin.bottom
+    var height = 850 - margin.top - margin.bottom
 
   return {
     restrict: 'EA', 
     scope: {
-      data: '='
+      data: '=',
+      show: '='
     },
     link: function(scope, element, attrs) {
       d3Service.d3().then(function(d3) {
@@ -42,6 +43,10 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
           return scope.update(newVals);
         }, true);
 
+        scope.$watch('show', function() {
+          return scope.update(scope.data)
+        }, true)
+
         scope.render = function(data) {
           x.domain(data.map(function(d) { return d.activity; }));
           y.domain([0, 12])
@@ -69,6 +74,11 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
           svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
+              .style('display', function(d) {
+                if(d.name === "ATUS") {
+                  return 'none'
+                }
+              })
               .attr("class", "bar")
               .attr("x", function(d) {
                 var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/2
@@ -83,7 +93,7 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
                 return color
               })
         
-        svg.selectAll(".tooltip")
+        svg.selectAll(".d3-tooltip")
            .data(data)
            .enter()
            .append("text")
@@ -93,7 +103,7 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
             }
            })
            .attr("text-anchor", "middle")
-           .attr('class', 'tooltip')
+           .attr('class', 'd3-tooltip')
             .attr("x", function(d) {
                 var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/1.33
 
@@ -117,8 +127,13 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
             .transition() 
             .attr('y', function(d) {return y(d.hours)})
             .attr('height', function(d) {return height - y(d.hours)})
+            .style('display', function(d) {
+              if(d.name === "ATUS" && !scope.$parent.displayGraph) {
+                return 'hidden'
+              } 
+            })
 
-        svg.selectAll('.tooltip')
+        svg.selectAll('.d3-tooltip')
           .data(data)
           .transition()
           .text(function(d) {

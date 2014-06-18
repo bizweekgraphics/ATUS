@@ -1,24 +1,22 @@
 <div id="container">
   <div id="left">
     <div ng-repeat="data in averageData.slice(0, 6)">
-      <h4>{{data.activity}}: {{activity}} hours</h4>
+      <h4 tooltip-placement="bottom" tooltip="{{averageData[$index].nested}}">{{data.activity}}: {{activity}} hours</h4>
       <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
     </div>
   </div>
   <div id="right">
     <div ng-repeat="data in averageData.slice(6, 12)">
-      <h4>{{data.activity}}: {{activity}} hours</h4>
+      <h4 tooltip-placement="bottom" tooltip="{{averageData[$index + 6].nested}}">{{data.activity}}: {{activity}} hours</h4>
       <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
     </div>
   </div>
   <div class="clear"></div>
 </div>
 Total Hours: {{totalHours}}
-<button ng-show="checkHours()">Reveal</button>
+<button ng-show="checkHours()" ng-click="showGraph()">Reveal</button>
 
 
 
-
-
-<div d3-bar data="testData"></div>
+<div d3-bar data="testData" show="displayGraph"></div>
 

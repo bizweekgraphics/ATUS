@@ -10,6 +10,11 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
     return $scope.totalHours === 24
   }
 
+  $scope.displayGraph = false
+  $scope.showGraph = function() {
+    $scope.displayGraph = true
+  }
+
   $scope.activity = 0
 
   $scope.set0 = 0
@@ -26,7 +31,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
   $scope.set11 = 0
 
   $scope.setData = function(elemCounter, value) {
-    $scope[elemCounter] = parseInt(value)
+    $scope[elemCounter] = parseFloat(value)
 
     $scope.personalData = [
       {"name":"you","activity":"Personal care activities","hours": $scope.set0,"counter":"set0"},
@@ -56,7 +61,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
       angular.forEach(res.data[0], function(value, key) {
         var test = "set" + counter
         counter += 1
-        $scope.averageData.push({name: "ATUS", activity: key, hours: value[0]["average hours total"], counter: test})
+        $scope.averageData.push({name: "ATUS", activity: key, hours: value[0]["average hours total"], counter: test, nested: value[0].nested})
         $scope.personalData.push({name: "you", activity: key, hours: 0, counter: test})
       })
       init()

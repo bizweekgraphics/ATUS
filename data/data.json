@@ -2,6 +2,7 @@
   "Personal care activities": [
     {
       "activity": "Personal care activities",
+      "nested": "Sleeping, grooming, health-related self care, personal activites, travel related to personal care",
       "average hours total": "9.54",
       "average hours men": "9.31",
       "average hours women": "9.76",
@@ -16,6 +17,7 @@
   "Eating and drinking": [
     {
       "activity": "Eating and drinking",
+      "nested": "Eating and drinking, travel related to eating and drinking",
       "average hours total": "1.23",
       "average hours men": "1.26",
       "average hours women": "1.20",
@@ -30,6 +32,7 @@
   "Household activities": [
     {
       "activity": "Household activities",
+      "nested": "Housework, food preparation and cleanup, lawn and garden care, household management, interior maintenance, repair, and decoration, exterior maintenance, repair and decoration, animals and pets, vehicles, appliances, tools, and toys, travel related to household activities",
       "average hours total": "1.78",
       "average hours men": "1.34",
       "average hours women": "2.19",
@@ -44,6 +47,7 @@
   "Purchasing goods and services": [
     {
       "activity": "Purchasing goods and services",
+      "nested": "Consumer goods purchases, grocery shopping, professional and personal care services, financial services and banking, medical and care services, personal care services, household servies, home maintenance, repair, decoration, and construction (not done by self), vehicle maintenance and repair services (not done by self), government services, travel related to purchasing goods and services",
       "average hours total": ".75",
       "average hours men": ".63",
       "average hours women": ".86",
@@ -58,6 +62,7 @@
   "Caring for and helping household members": [
     {
       "activity": "Caring for and helping household members",
+      "nested": "Caring for and helping household children, caring for and helping household adults, travel related to caring for and helping household members",
       "average hours total": ".53",
       "average hours men": ".36",
       "average hours women": ".69",
@@ -72,6 +77,7 @@
   "Caring for and helping nonhousehold members": [
     {
       "activity": "Caring for and helping nonhousehold members",
+      "nested": "Travel related to caring for and helping nonhousehold members",
       "average hours total": ".19",
       "average hours men": ".17",
       "average hours women": ".22",
@@ -86,6 +92,7 @@
   "Working and work-related activities": [
     {
       "activity": "Working and work-related activities",
+      "nested": "working, work-related activites, other income-generating activites, job search and interviewing, travel related to work",
       "average hours total": "3.46",
       "average hours men": "4.20",
       "average hours women": "2.77",
@@ -100,6 +107,7 @@
   "Educational activities": [
     {
       "activity": "Educational activities",
+      "nested": "Attending class, homework and research, travel related to education",
       "average hours total": ".48",
       "average hours men": ".47",
       "average hours women": ".48",
@@ -114,6 +122,7 @@
   "Organizational, civic, and religious activities": [
     {
       "activity": "Organizational, civic, and religious activities",
+      "nested": "Religious and spiritual activites, volunteering, travel related to organizational, civic, and religious activities",
       "average hours total": ".32",
       "average hours men": ".29",
       "average hours women": ".36",
@@ -128,6 +137,7 @@
   "Leisure and sports": [
     {
       "activity": "Leisure and sports",
+      "nested": "socializing, relaxing, and leisure, sports, exercise, and recreation",
       "average hours total": "5.26",
       "average hours men": "5.61",
       "average hours women": "4.94",
@@ -142,6 +152,7 @@
   "Telephone calls, mail, and e-mail": [
     {
       "activity": "Telephone calls, mail, and e-mail",
+      "nested": "Phone calls, household and personal messages (mail and e-mail), travel related to phone calls",
       "average hours total": ".15",
       "average hours men": ".10",
       "average hours women": ".19",
