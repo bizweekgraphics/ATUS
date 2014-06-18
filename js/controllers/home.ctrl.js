@@ -4,6 +4,8 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
     $scope.setData()
   }
 
+  $scope.activity = 0
+
   $scope.set0 = 0
   $scope.set1 = 0
   $scope.set2 = 0
@@ -16,11 +18,6 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
   $scope.set9 = 0
   $scope.set10 = 0
   $scope.set11 = 0
-  $scope.set12 = 0
-
-
-
-  $scope["Personal care activites"] = 0
 
   $scope.setData = function(elemCounter, value) {
     $scope[elemCounter] = value
