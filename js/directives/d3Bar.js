@@ -36,12 +36,10 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         scope.$watch('data', function(newVals, oldVals) {
-          return scope.render(newVals);
+          return scope.update(newVals);
         }, true);
 
         scope.render = function(data) {
-          svg.selectAll('*').remove();
-
 
           x.domain(data.map(function(d) { return d.activity; }));
           y.domain([0, 24])
@@ -74,7 +72,16 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
 
         }
 
+      scope.update = function(data) {
+         svg.selectAll('rect')
+            .data(data)
+            .transition() 
+            .attr('y', function(d) {return y(d.hours)})
+            .attr('height', function(d) {return height - y(d.hours)})
+      }
+
       scope.render(scope.data)
+
       })
     }
   }
