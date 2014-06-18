@@ -35,7 +35,8 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
           .attr("width", width + margin.left + margin.right)
           .attr("height", height + margin.top + margin.bottom)
           .append("g")
-          .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+          .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+
 
         scope.$watch('data', function(newVals, oldVals) {
           return scope.update(newVals);
@@ -76,6 +77,31 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
                 var color = d.name === "you" ? "blue" : "red"
                 return color
               })
+        
+        svg.selectAll(".tooltip")
+           .data(data)
+           .enter()
+           .append("text")
+           .text(function(d) {
+            if(d.hours > 0) {
+              return d.hours;
+            }
+           })
+           .attr("text-anchor", "middle")
+           .attr('class', 'tooltip')
+            .attr("x", function(d) {
+                var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/1.33
+
+                return xVal
+              })
+           .attr("y", function(d) {
+            return y(d.hours) + 20
+           })
+           .attr("font-family", "sans-serif") 
+           .attr("font-size", "11px")
+           .attr("fill", "white")
+
+
 
 
         }
@@ -86,6 +112,22 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
             .transition() 
             .attr('y', function(d) {return y(d.hours)})
             .attr('height', function(d) {return height - y(d.hours)})
+
+        svg.selectAll('.tooltip')
+          .data(data)
+          .transition()
+          .text(function(d) {
+            if(d.hours > 0) {
+              return d.hours;
+            }
+          })
+          .attr("y", function(d) {
+            return y(d.hours) + 20
+          })
+          .attr("x", function(d) {
+            var xVal = d.name === "you" ? x(d.activity) + x.rangeBand()/4 : x(d.activity) + x.rangeBand()/1.33
+              return xVal
+          })
       }
 
       scope.render(scope.data)
