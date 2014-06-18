@@ -1,34 +1,20 @@
 <div id="container">
   <div id="left">
-<h3>Personal Care Activites: {{personalCare}} hours</h3>
-<div slider class="slider left" ng-model="personalCare"></div>
-<h3>Eating and Drinking: {{eating}} hours</h3>
-<div slider class="slider left" ng-model="eating"></div>
-<h3>Household Activities: {{household}} hours</h3>
-<div slider class="slider left" ng-model="household"></div>
-<h3>Purchasing Goods and Services: {{purchasing}} hours</h3>
-<div slider class="slider left" ng-model="purchasing"></div>
-<h3>Personal Care Activites: {{personalCare}} hours</h3>
-<div slider class="slider left" ng-model="personalCare"></div>
-<h3>Eating and Drinking: {{eating}} hours</h3>
-<div slider class="slider left" ng-model="eating"></div>
+    <div ng-repeat="data in averageData.slice(0, 5)">
+      <h4>{{data.activity}}: {{data.counter}} hours</h4>
+      <div slider class="slider" counter="{{data.counter}}" ng-model="data.counter"></div>
+    </div>
   </div>
   <div id="right">
-<h3>Household Activities: {{household}} hours</h3>
-<div slider class="slider right" ng-model="household"></div>
-<h3>Purchasing Goods and Services: {{purchasing}} hours</h3>
-<div slider class="slider right" ng-model="purchasing"></div>
-<h3>Personal Care Activites: {{personalCare}} hours</h3>
-<div slider class="slider right" ng-model="personalCare"></div>
-<h3>Eating and Drinking: {{eating}} hours</h3>
-<div slider class="slider right" ng-model="eating"></div>
-<h3>Household Activities: {{household}} hours</h3>
-<div slider class="slider right" ng-model="household"></div>
-<h3>Purchasing Goods and Services: {{purchasing}} hours</h3>
-<div slider class="slider right" ng-model="purchasing"></div>
+    <div ng-repeat="data in averageData.slice(6, 11)">
+      <h4>{{data.activity}}: {{data.counter}} hours</h4>
+      <div slider class="slider" counter="{{data.counter}}" ng-model="data.counter"></div>
+    </div>
   </div>
   <div class="clear"></div>
 </div>
+
+
 
 
 <div d3-bar data="testData"></div>

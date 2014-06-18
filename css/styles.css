@@ -8,7 +8,7 @@
     }
 
 #right {
-  padding-top: .1em;
+  padding-top: .05em;
   margin-left: 485px; /* Change this to whatever the width of your left column is*/
 }
 
@@ -23,8 +23,9 @@
   clear: both;
 }
 
-h3 {
+h4 {
   margin-left: 1em;
+  font-family: sans-serif;
 }
 
 .axis {
