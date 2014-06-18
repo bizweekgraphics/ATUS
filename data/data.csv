@@ -1,27 +1,46 @@
-letter,frequency
-A,.08167
-B,.01492
-C,.02782
-D,.04253
-E,.12702
-F,.02288
-G,.02015
-H,.06094
-I,.06966
-J,.00153
-K,.00772
-L,.04025
-M,.02406
-N,.06749
-O,.07507
-P,.01929
-Q,.00095
-R,.05987
-S,.06327
-T,.09056
-U,.02758
-V,.00978
-W,.02360
-X,.00150
-Y,.01974
-Z,.00074
+Activity, Average hours (total), Average hours (Men), Average Hours (Women), Average percent (total), Average Percent (Men), Average Percent(Women), Average hours engaged (total), Average hours engaged (men), Average hours engaged (women)
+"Personal care activities","9.54","9.31","9.76","100.0","99.9","100.0","9.55","9.31","9.76"
+"Eating and drinking","1.23","1.26","1.20","96.4","96.5","96.2","1.27","1.31","1.24"
+"Household activities","1.78","1.34","2.19","74.5","65.1","83.4","2.39","2.06","2.63"
+"Purchasing goods and services",".75",".63",".86","42.9","38.7","46.8","1.74","1.62","1.83"
+"Caring for and helping household members",".53",".36",".69","25.5","20.5","30.3","2.07","1.75","2.28"
+"Caring for and helping nonhousehold members",".19",".17",".22","11.5","10.0","12.9","1.68","1.69","1.68"
+"Working and work-related activities","3.46","4.20","2.77","43.2","49.7","37.2","8.01","8.45","7.46"
+"Educational activities",".48",".47",".48","8.0","7.6","8.3","5.98","6.25","5.74"
+"Organizational, civic, and religious activities",".32",".29",".36","14.0","11.3","16.5","2.31","2.52","2.17"
+"Leisure and sports","5.26","5.61","4.94","95.3","95.1","95.4","5.52","5.89","5.17"
+"Telephone calls, mail, and e-mail",".15",".10",".19","20.4","15.2","25.3",".72",".64",".77"
+"Other activities, not elsewhere classified",".31",".27",".35","17.5","15.5","19.5","1.77","1.77","1.78"
+
+
+
+Activity, Average hours (total), Average hours (Men), Average Hours (Women), Average percent (total), Average Percent (Men), Average Percent(Women), Average hours engaged (total), Average hours engaged (men), Average hours engaged (women)
+"Personal care activities","9.54","9.31","9.76","100.0","99.9","100.0","9.55","9.31","9.76"
+"Sleeping","8.74","8.65","8.82","99.9","99.9","99.9","8.75","8.66","8.82"
+"Eating and drinking","1.23","1.26","1.20","96.4","96.5","96.2","1.27","1.31","1.24"
+"Household activities","1.78","1.34","2.19","74.5","65.1","83.4","2.39","2.06","2.63"
+"Housework",".57",".25",".87","34.4","19.4","48.5","1.67","1.30","1.80"
+"Food preparation and cleanup",".57",".33",".80","55.3","41.7","68.1","1.03",".80","1.17"
+"Lawn and garden care",".18",".25",".12","9.3","11.3","7.4","1.98","2.26","1.60"
+"Household management",".13",".10",".16","17.2","14.2","20.1",".75",".73",".77"
+"Purchasing goods and services",".75",".63",".86","42.9","38.7","46.8","1.74","1.62","1.83"
+"Consumer goods purchases",".37",".29",".45","39.2","35.1","43.1",".94",".81","1.04"
+"Professional and personal care services",".08",".06",".10","7.4","5.9","8.8","1.11","1.07","1.13"
+"Caring for and helping household members",".53",".36",".69","25.5","20.5","30.3","2.07","1.75","2.28"
+"Caring for and helping household children",".41",".27",".54","20.9","16.2","25.3","1.96","1.68","2.13"
+"Caring for and helping nonhousehold members",".19",".17",".22","11.5","10.0","12.9","1.68","1.69","1.68"
+"Caring for and helping nonhousehold adults",".06",".07",".06","7.2","7.0","7.4",".87",".94",".81"
+"Working and work-related activities","3.46","4.20","2.77","43.2","49.7","37.2","8.01","8.45","7.46"
+"Working","3.14","3.80","2.52","41.5","47.8","35.7","7.55","7.95","7.06"
+"Educational activities",".48",".47",".48","8.0","7.6","8.3","5.98","6.25","5.74"
+"Attending class",".26",".27",".25","5.0","5.0","5.1","5.10","5.35","4.88"
+"Homework and research",".18",".17",".19","5.8","5.7","5.9","3.09","2.95","3.22"
+"Organizational, civic, and religious activities",".32",".29",".36","14.0","11.3","16.5","2.31","2.52","2.17"
+"Religious and spiritual activities",".14",".12",".17","9.1","7.3","10.8","1.58","1.64","1.55"
+"Volunteering (organizational and civic activities)",".14",".13",".15","6.1","5.1","7.1","2.31","2.62","2.11"
+"Leisure and sports","5.26","5.61","4.94","95.3","95.1","95.4","5.52","5.89","5.17"
+"Socializing and communicating",".72",".65",".78","36.8","34.0","39.5","1.95","1.92","1.97"
+"Watching television","2.77","2.98","2.57","79.4","80.4","78.5","3.49","3.71","3.27"
+"Participating in sports, exercise, and recreation",".30",".40",".20","18.6","21.0","16.3","1.60","1.90","1.25"
+"Telephone calls, mail, and e-mail",".15",".10",".19","20.4","15.2","25.3",".72",".64",".77"
+"Other activities, not elsewhere classified",".31",".27",".35","17.5","15.5","19.5","1.77","1.77","1.78"

@@ -1,8 +1,8 @@
 app.directive('d3Bar', ['d3Service', function(d3Service) {
 
-    var margin = {top: 20, right: 20, bottom: 30, left: 40}
-    var width = 960 - margin.left - margin.right
-    var height = 500 - margin.top - margin.bottom
+    var margin = {top: 20, right: 20, bottom: 220, left: 40}
+    var width = 970 - margin.left - margin.right
+    var height = 750 - margin.top - margin.bottom
 
   return {
     restrict: 'EA', 
@@ -44,12 +44,17 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
 
         scope.render = function(data) {
           x.domain(data.map(function(d) { return d.activity; }));
-          y.domain([0, 24])
+          y.domain([0, 12])
 
           svg.append("g")
               .attr("class", "x axis")
               .attr("transform", "translate(0," + height + ")")
-              .call(xAxis);
+              .call(xAxis)
+              .selectAll(".x text")
+              .style("text-anchor", "end")
+              .attr('transform', "rotate (-65)")
+              .attr('dy', '1em')
+
 
           svg.append("g")
               .attr("class", "y axis")

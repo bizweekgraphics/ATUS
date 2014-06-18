@@ -1,4 +1,4 @@
-app.controller('HomeCtrl', ['$scope', 'd3Service', function($scope, d3Service) {
+app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3Service, $http) {
 
   function init() {
     $scope.setData()
@@ -10,21 +10,24 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', function($scope, d3Service) {
   $scope.purchasing = 0
 
   $scope.setData = function() {
-    $scope.testData = [
-    {name: "you", activity: "Personal care activites", hours: $scope.personalCare},
-    {name: "you", activity: "Eating and drinking", hours: $scope.eating},
-    {name: "you", activity: "Household activities", hours: $scope.household},
-    {name: "you", activity: "Purchasing goods and services", hours: $scope.purchasing},
-    {name: "ATUS", activity: "Personal care activites", hours: 3},
-
-    {name: "ATUS", activity: "Eating and drinking", hours: 2},
-
-    {name: "ATUS", activity: "Household activities", hours: 4},
-
-    {name: "ATUS", activity: "Purchasing goods and services", hours: 6}
-    ]
+    // $scope.testData = [
+    // {name: "you", activity: "Personal care activites", hours: $scope.personalCare},
+    // {name: "you", activity: "Eating and drinking", hours: $scope.eating},
+    // {name: "you", activity: "Household activities", hours: $scope.household},
+    // {name: "you", activity: "Purchasing goods and services", hours: $scope.purchasing}
+    // ]
+    $scope.testData = $scope.averageData.concat($scope.personalData)
   }
 
-  init()
+  $http.get('/data/data.json')
+    .then(function(res) {
+      $scope.averageData = []
+      $scope.personalData = []
+      angular.forEach(res.data[0], function(value, key) {
+        $scope.averageData.push({name: "ATUS", activity: key, hours: value[0]["average hours total"]})
+        $scope.personalData.push({name: "you", activity: key, hours: 0})
+      })
+      init()
+    })
 
 }])

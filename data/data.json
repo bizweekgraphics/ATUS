@@ -1,0 +1,170 @@
+[{
+  "Personal care activities": [
+    {
+      "activity": "Personal care activities",
+      "average hours total": "9.54",
+      "average hours men": "9.31",
+      "average hours women": "9.76",
+      "average percent total": "100.0",
+      "average percent men": "99.9",
+      "average percent women": "100.0",
+      "average hours engaged total": "9.55",
+      "average hours engaged men": "9.31",
+      "average hours engaged women": "9.76"
+    }
+  ],
+  "Eating and drinking": [
+    {
+      "activity": "Eating and drinking",
+      "average hours total": "1.23",
+      "average hours men": "1.26",
+      "average hours women": "1.20",
+      "average percent total": "96.4",
+      "average percent men": "96.5",
+      "average percent women": "96.2",
+      "average hours engaged total": "1.27",
+      "average hours engaged men": "1.31",
+      "average hours engaged women": "1.24"
+    }
+  ],
+  "Household activities": [
+    {
+      "activity": "Household activities",
+      "average hours total": "1.78",
+      "average hours men": "1.34",
+      "average hours women": "2.19",
+      "average percent total": "74.5",
+      "average percent men": "65.1",
+      "average percent women": "83.4",
+      "average hours engaged total": "2.39",
+      "average hours engaged men": "2.06",
+      "average hours engaged women": "2.63"
+    }
+  ],
+  "Purchasing goods and services": [
+    {
+      "activity": "Purchasing goods and services",
+      "average hours total": ".75",
+      "average hours men": ".63",
+      "average hours women": ".86",
+      "average percent total": "42.9",
+      "average percent men": "38.7",
+      "average percent women": "46.8",
+      "average hours engaged total": "1.74",
+      "average hours engaged men": "1.62",
+      "average hours engaged women": "1.83"
+    }
+  ],
+  "Caring for and helping household members": [
+    {
+      "activity": "Caring for and helping household members",
+      "average hours total": ".53",
+      "average hours men": ".36",
+      "average hours women": ".69",
+      "average percent total": "25.5",
+      "average percent men": "20.5",
+      "average percent women": "30.3",
+      "average hours engaged total": "2.07",
+      "average hours engaged men": "1.75",
+      "average hours engaged women": "2.28"
+    }
+  ],
+  "Caring for and helping nonhousehold members": [
+    {
+      "activity": "Caring for and helping nonhousehold members",
+      "average hours total": ".19",
+      "average hours men": ".17",
+      "average hours women": ".22",
+      "average percent total": "11.5",
+      "average percent men": "10.0",
+      "average percent women": "12.9",
+      "average hours engaged total": "1.68",
+      "average hours engaged men": "1.69",
+      "average hours engaged women": "1.68"
+    }
+  ],
+  "Working and work-related activities": [
+    {
+      "activity": "Working and work-related activities",
+      "average hours total": "3.46",
+      "average hours men": "4.20",
+      "average hours women": "2.77",
+      "average percent total": "43.2",
+      "average percent men": "49.7",
+      "average percent women": "37.2",
+      "average hours engaged total": "8.01",
+      "average hours engaged men": "8.45",
+      "average hours engaged women": "7.46"
+    }
+  ],
+  "Educational activities": [
+    {
+      "activity": "Educational activities",
+      "average hours total": ".48",
+      "average hours men": ".47",
+      "average hours women": ".48",
+      "average percent total": "8.0",
+      "average percent men": "7.6",
+      "average percent women": "8.3",
+      "average hours engaged total": "5.98",
+      "average hours engaged men": "6.25",
+      "average hours engaged women": "5.74"
+    }
+  ],
+  "Organizational, civic, and religious activities": [
+    {
+      "activity": "Organizational, civic, and religious activities",
+      "average hours total": ".32",
+      "average hours men": ".29",
+      "average hours women": ".36",
+      "average percent total": "14.0",
+      "average percent men": "11.3",
+      "average percent women": "16.5",
+      "average hours engaged total": "2.31",
+      "average hours engaged men": "2.52",
+      "average hours engaged women": "2.17"
+    }
+  ],
+  "Leisure and sports": [
+    {
+      "activity": "Leisure and sports",
+      "average hours total": "5.26",
+      "average hours men": "5.61",
+      "average hours women": "4.94",
+      "average percent total": "95.3",
+      "average percent men": "95.1",
+      "average percent women": "95.4",
+      "average hours engaged total": "5.52",
+      "average hours engaged men": "5.89",
+      "average hours engaged women": "5.17"
+    }
+  ],
+  "Telephone calls, mail, and e-mail": [
+    {
+      "activity": "Telephone calls, mail, and e-mail",
+      "average hours total": ".15",
+      "average hours men": ".10",
+      "average hours women": ".19",
+      "average percent total": "20.4",
+      "average percent men": "15.2",
+      "average percent women": "25.3",
+      "average hours engaged total": ".72",
+      "average hours engaged men": ".64",
+      "average hours engaged women": ".77"
+    }
+  ],
+  "Other activities, not elsewhere classified": [
+    {
+      "activity": "Other activities, not elsewhere classified",
+      "average hours total": ".31",
+      "average hours men": ".27",
+      "average hours women": ".35",
+      "average percent total": "17.5",
+      "average percent men": "15.5",
+      "average percent women": "19.5",
+      "average hours engaged total": "1.77",
+      "average hours engaged men": "1.77",
+      "average hours engaged women": "1.78"
+    }
+  ]
+}]
