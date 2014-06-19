@@ -72,3 +72,32 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
   $scope.filterGraph('average hours total')
 
 }])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
