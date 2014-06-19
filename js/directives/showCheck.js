@@ -1,52 +1,44 @@
 app.directive('showCheck', function() {
   return {
     link:function(scope, element) {
-      $(element).on('mousedown', function(event) {
-        var element = event.target
-        var elClass = $(element).attr('class').split(' ')[0]
-        $('.' + elClass).attr('checked', false)
-      })
-      $(element).on('change', function(event) {
+      $(element).on('click', function(event) {
           var element = event.target
+          var elementChecked = element.checked
           var elClass = $(element).attr('class').split(' ')[0]
+          $('.' + elClass).attr('checked', false)
+          element.checked = elementChecked
           switch(elClass) {
             case "average":
-              $('.day').attr('disabled', true)
-              $('.education').attr('disabled', true)
-              $('.race').attr('disabled', true)
-              $('.age').attr('disabled', true)
-              $('.gender').attr('disabled', true)
+              $('.day').attr('disabled', elementChecked)
+              $('.education').attr('disabled', elementChecked)
+              $('.race').attr('disabled', elementChecked)
+              $('.age').attr('disabled', elementChecked)
+              $('.gender').attr('disabled', elementChecked)
               break;
             case "gender":
-              $('.day').attr('disabled', true)
-              $('.education').attr('disabled', true)
-              $('.average').attr('disabled', true)
+              $('.day').attr('disabled', elementChecked)
+              $('.education').attr('disabled', elementChecked)
+              $('.average').attr('disabled', elementChecked)
               break;
             case "race":
-              $('.day').attr('disabled', true)
-              $('.education').attr('disabled', true)
-              $('.age').attr('disabled', true)
-              $('.average').attr('disabled', true)
+              $('.day').attr('disabled', elementChecked)
+              $('.education').attr('disabled', elementChecked)
+              $('.age').attr('disabled', elementChecked)
+              $('.average').attr('disabled', elementChecked)
               break;
             case "education":
-              $('.day').attr('disabled', true)
-              $('.race').attr('disabled', true)
-              $('.gender').attr('disabled', true)
-              $('.average').attr('disabled', true)
+              $('.day').attr('disabled', elementChecked)
+              $('.race').attr('disabled', elementChecked)
+              $('.gender').attr('disabled', elementChecked)
+              $('.average').attr('disabled', elementChecked)
               break;
             case "age":
-              $('.day').attr('disabled', true)
-              $('.education').attr('disabled', true)
-              $('.race').attr('disabled', true)
-              $('.average').attr('disabled', true)
+              $('.day').attr('disabled', elementChecked)
+              $('.education').attr('disabled', elementChecked)
+              $('.race').attr('disabled', elementChecked)
+              $('.average').attr('disabled', elementChecked)
               break;
           }
-
-          // $('.' + elClass).each(function(index, el) {
-          //   if(!el.checked) {
-          //     $(el).attr('disabled', true)
-          //   }
-          // })
       })
     }
   }
