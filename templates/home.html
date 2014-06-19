@@ -1,4 +1,4 @@
-<div id="container">
+<div class="container">
   <div id="left">
     <div ng-repeat="data in averageData.slice(0, 6)">
       <h4 tooltip-placement="bottom" tooltip="{{averageData[$index].nested}}">{{data.activity}}: {{activity}} hours</h4>
@@ -12,17 +12,23 @@
     </div>
   </div>
   <div class="clear"></div>
-</div>
 Total Hours: {{totalHours}}
+<br>
 <button ng-show="checkHours()" ng-click="showGraph()">Reveal</button>
-<button ng-click="filterGraph('average hours men')">Average Hours Men</button>
+<!-- <button ng-click="filterGraph('average hours men')">Average Hours Men</button>
 <button ng-click="filterGraph('average hours women')">Average Hours Women</button>
 <button ng-click="filterGraph('weekend')">Weekend/Holiday</button>
-<button ng-click="filterGraph('weekday')">Weekday</button>
+<button ng-click="filterGraph('weekday')">Weekday</button> -->
+
+
+<label ng-repeat="item in checkboxArray" class="checkbox-inline">
+  <input type="checkbox" class="{{item.group}}" show-check> {{item.label}}
+</label>
 
 
 
 
 
 <div d3-bar data="testData" show="displayGraph"></div>
+</div>
 

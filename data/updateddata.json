@@ -61,7 +61,7 @@
         "Other marital statuses (women)": 10.02,
         "Educational attainment, 25 years and over (less than a high school diploma)": 9.88,
         "Educational attainment, 25 years and over (high school graduates, no college)": 9.54,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 9.39,
+        "Educational attainment, 25 years and over (some college or associate degree)": 9.39,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 9.15
     },
     {
@@ -126,7 +126,7 @@
         "Other marital statuses (women)": 1.1,
         "Educational attainment, 25 years and over (less than a high school diploma)": 1.11,
         "Educational attainment, 25 years and over (high school graduates, no college)": 1.19,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 1.19,
+        "Educational attainment, 25 years and over (some college or associate degree)": 1.19,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 1.39
     },
     {
@@ -191,7 +191,7 @@
         "Other marital statuses (women)": 1.76,
         "Educational attainment, 25 years and over (less than a high school diploma)": 2.17,
         "Educational attainment, 25 years and over (high school graduates, no college)": 2.15,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 1.91,
+        "Educational attainment, 25 years and over (some college or associate degree)": 1.91,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 1.79
     },
     {
@@ -256,7 +256,7 @@
         "Other marital statuses (women)": 0.81,
         "Educational attainment, 25 years and over (less than a high school diploma)": 0.57,
         "Educational attainment, 25 years and over (high school graduates, no college)": 0.77,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 0.81,
+        "Educational attainment, 25 years and over (some college or associate degree)": 0.81,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 0.84
     },
     {
@@ -321,7 +321,7 @@
         "Other marital statuses (women)": 0.44,
         "Educational attainment, 25 years and over (less than a high school diploma)": 0.57,
         "Educational attainment, 25 years and over (high school graduates, no college)": 0.44,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 0.61,
+        "Educational attainment, 25 years and over (some college or associate degree)": 0.61,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 0.69
     },
     {
@@ -386,7 +386,7 @@
         "Other marital statuses (women)": 0.25,
         "Educational attainment, 25 years and over (less than a high school diploma)": 0.18,
         "Educational attainment, 25 years and over (high school graduates, no college)": 0.23,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 0.2,
+        "Educational attainment, 25 years and over (some college or associate degree)": 0.2,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 0.17
     },
     {
@@ -451,7 +451,7 @@
         "Other marital statuses (women)": 2.62,
         "Educational attainment, 25 years and over (less than a high school diploma)": 2.46,
         "Educational attainment, 25 years and over (high school graduates, no college)": 3.24,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 3.78,
+        "Educational attainment, 25 years and over (some college or associate degree)": 3.78,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 4.4
     },
     {
@@ -516,7 +516,7 @@
         "Other marital statuses (women)": 0.87,
         "Educational attainment, 25 years and over (less than a high school diploma)": 0,
         "Educational attainment, 25 years and over (high school graduates, no college)": 0.04,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 0.23,
+        "Educational attainment, 25 years and over (some college or associate degree)": 0.23,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 0.14
     },
     {
@@ -581,7 +581,7 @@
         "Other marital statuses (women)": 0.31,
         "Educational attainment, 25 years and over (less than a high school diploma)": 0.35,
         "Educational attainment, 25 years and over (high school graduates, no college)": 0.3,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 0.31,
+        "Educational attainment, 25 years and over (some college or associate degree)": 0.31,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 0.4
     },
     {
@@ -646,7 +646,7 @@
         "Other marital statuses (women)": 5.25,
         "Educational attainment, 25 years and over (less than a high school diploma)": 6.29,
         "Educational attainment, 25 years and over (high school graduates, no college)": 5.69,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 5.1,
+        "Educational attainment, 25 years and over (some college or associate degree)": 5.1,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 4.57
     },
     {
@@ -711,7 +711,7 @@
         "Other marital statuses (women)": 0.21,
         "Educational attainment, 25 years and over (less than a high school diploma)": 0.08,
         "Educational attainment, 25 years and over (high school graduates, no college)": 0.14,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 0.15,
+        "Educational attainment, 25 years and over (some college or associate degree)": 0.15,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 0.18
     },
     {
@@ -775,7 +775,7 @@
         "Other marital statuses (women)": 0.35,
         "Educational attainment, 25 years and over (less than a high school diploma)": 0.34,
         "Educational attainment, 25 years and over (high school graduates, no college)": 0.26,
-        "SEducational attainment, 25 years and over (some college or associate degree)": 0.31,
+        "Educational attainment, 25 years and over (some college or associate degree)": 0.31,
         "Educational attainment, 25 years and over (bachelor’s degree and higher)": 0.29
     }
 ]

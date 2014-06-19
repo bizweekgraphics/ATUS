@@ -149,7 +149,7 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
               return xVal
           })
       }
-
+      
       scope.render(scope.data)
 
       })

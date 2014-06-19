@@ -1,0 +1,78 @@
+[
+    {
+        "label": "Average American",
+        "group": "average"
+    },
+    {
+        "label": " Men",
+        "group": "gender"
+    },
+    {
+        "label": "Women",
+        "group": "gender"
+    },
+    {
+        "label": "Weekday",
+        "group": "day"
+    },
+    {
+        "label": "Weekend",
+        "group": "day"
+    },
+    {
+        "label": "15-19",
+        "group": "age"
+    },
+    {
+        "label": "20-24",
+        "group": "age"
+    },
+    {
+        "label": "25-34",
+        "group": "age"
+    },
+    {
+        "label": "45-54",
+        "group": "age"
+    },
+    {
+        "label": "55-64",
+        "group": "age"
+    },
+    {
+        "label": "65-74",
+        "group": "age"
+    },
+    {
+        "label": "75+",
+        "group": "age"
+    },
+    {
+        "label": "White",
+        "group": "race"
+    },
+    {
+        "label": "Black/African American",
+        "group": "race"
+    },
+    {
+        "label": "Hispanic or Latino",
+        "group": "race"
+    },
+    {
+        "label": "Less than a high school diploma",
+        "group": "education"
+    },
+    {
+        "label": "High school graduate, no college",
+        "group": "education"
+    },
+    {
+        "label": "Some college or associate degree",
+        "group": "education"
+    },
+    {
+        "label": "Bachelor's degree or higher",
+        "group": "education"
+    }
+]

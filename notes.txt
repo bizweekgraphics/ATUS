@@ -1,0 +1,5 @@
+array.forEach(function(item) {
+  newArray.forEach(function(obj) {
+    obj[item["Characteristic"]] = item[obj.activity]
+  })
+})
