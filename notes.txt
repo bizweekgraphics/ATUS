@@ -3,3 +3,10 @@ array.forEach(function(item) {
     obj[item["Characteristic"]] = item[obj.activity]
   })
 })
+
+
+When Gender is checked -> Day, education is disabled
+When Average is checked -> Day, Education, Race, Age is disabled
+When Race is checked -> Day, Education, Age is disabled
+When Education is checked -> Day, Race, Gender is disabled
+When Age is checked -> Day, Race, Education is disabled

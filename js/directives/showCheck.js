@@ -1,11 +1,11 @@
 app.directive('showCheck', function() {
   return {
     link:function(scope, element) {
-      $(element).bind('click', {scope: scope, element: element}, function(event) {
+      $(element).on('change', {scope: scope, element: element}, function(event) {
+          $('.checkbox').attr('disabled', false)
           var element = event.target
           var elClass = $(element).attr('class')
-          $('.' + elClass).each(function(el) {
-          debugger;
+          $('.' + elClass).each(function(index, el) {
             if(!el.checked) {
               $(el).attr('disabled', true)
             }
