@@ -41,6 +41,13 @@ app.directive('showCheck', function() {
               $('.average').attr('disabled', elementChecked)
               break;
           }
+        $('.checkbox').each(function(index, item) {
+          if(item.disabled) {
+            $(item).parent().css('opacity', .2)
+          } else {
+            $(item).parent().css('opacity', 1)
+          }
+        })
       })
     }
   }
