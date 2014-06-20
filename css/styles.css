@@ -81,10 +81,7 @@ h4 {
   shape-rendering: crispEdges;
 }
 
-.x.axis path {
+.y.axis path {
   display: none;
 }
 
-svg {
-  border: 1px solid black;
-}

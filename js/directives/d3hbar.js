@@ -23,11 +23,13 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
         var xAxis = d3.svg.axis()
           .scale(x)
           .orient("bottom")
+          // .ticks(10)
+
 
         var yAxis = d3.svg.axis()
           .scale(y)
           .orient("left")
-          .ticks(10)
+
 
         var svg = d3.select(element[0])
           .append('svg')
@@ -54,20 +56,17 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
               .attr("class", "x axis")
               .attr("transform", "translate(0," + height + ")")
               .call(xAxis)
-              .selectAll(".x text")
-              .style("text-anchor", "end")
-              .attr('dy', '1em')
+
 
 
           svg.append("g")
               .attr("class", "y axis")
-              .call(yAxis)
-            // .append("text")
-            //   .attr("transform", "rotate(-90)")
-            //   .attr("y", 6)
-            //   .attr("dy", ".71em")
-            //   .style("text-anchor", "end")
-            //   .text("Hours");
+              .call(yAxis)              
+              .selectAll(".y text")
+              .style("text-anchor", "middle")
+              .attr('dx', '-6em')
+              .call(wrap, 160)
+
 
           svg.selectAll(".bar")
             .data(data)
@@ -79,8 +78,6 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
               })
               .attr("class", "bar")
               .attr("x", function(d) {
-                // var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/2
-                // return xVal
                 return 0
               })
               .attr("width", function(d) {
@@ -98,28 +95,27 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
                 return color
               })
         
-        // svg.selectAll(".d3-tooltip")
-        //    .data(data)
-        //    .enter()
-        //    .append("text")
-        //    .text(function(d) {
-        //     if(d.hours > 0) {
-        //       return d.hours;
-        //     }
-        //    })
-        //    .attr("text-anchor", "middle")
-        //    .attr('class', 'd3-tooltip')
-        //     .attr("x", function(d) {
-        //         var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + y.rangeBand()/1.33
-
-        //         return xVal
-        //       })
-        //    .attr("y", function(d) {
-        //     return y(d.hours) + 20
-        //    })
-        //    .attr("font-family", "sans-serif") 
-        //    .attr("font-size", "11px")
-        //    .attr("fill", "white")
+        svg.selectAll(".d3-tooltip")
+           .data(data)
+           .enter()
+           .append("text")
+           .text(function(d) {
+            if(d.hours > 0) {
+              return d.hours;
+            }
+           })
+           .attr("text-anchor", "middle")
+           .attr('class', 'd3-tooltip')
+            .attr("y", function(d) {
+                var yVal = d.name === "you" ? y(d.activity) : y(d.activity) + y.rangeBand()/1.2
+                return yVal
+              })
+           .attr("x", function(d) {
+            return x(d.hours) - 20
+           })
+           .attr("font-family", "sans-serif") 
+           .attr("font-size", "11px")
+           .attr("fill", "white")
 
 
         }
@@ -141,22 +137,47 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
               } 
             })
 
-        // svg.selectAll('.d3-tooltip')
-        //   .data(data)
-        //   .transition()
-        //   .text(function(d) {
-        //     if(d.hours > 0) {
-        //       return d.hours;
-        //     }
-        //   })
-        //   .attr("y", function(d) {
-        //     return y(d.hours) + 20
-        //   })
-        //   .attr("x", function(d) {
-        //     var xVal = d.name === "you" ? x(d.activity) + x.rangeBand()/4 : x(d.activity) + x.rangeBand()/1.33
-        //       return xVal
-        //   })
+        svg.selectAll('.d3-tooltip')
+          .data(data)
+          .transition()
+          .text(function(d) {
+            if(d.hours > 0) {
+              return d.hours;
+            }
+          })
+            .attr("y", function(d) {
+                var yVal = d.name === "you" ? y(d.activity) + 20 : y(d.activity) + y.rangeBand()/1.2
+                return yVal
+              })
+         .attr("x", function(d) {
+          return x(d.hours) - 20
+         })
       }
+
+      function wrap(text, width) {
+        text.each(function() {
+          var text = d3.select(this),
+              words = text.text().split(/\s+/).reverse(),
+              word,
+              line = [],
+              lineNumber = 0,
+              lineHeight = 1.1, // ems
+              y = text.attr("y"),
+              dy = parseFloat(text.attr("dy")),
+              tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+          while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > width) {
+              line.pop();
+              tspan.text(line.join(" "));
+              line = [word];
+              tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").attr('dx', '-6em').text(word);
+            }
+          }
+        });
+      }
+
       
       setTimeout(function() {
         scope.render(scope.data)    
