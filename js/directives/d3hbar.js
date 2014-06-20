@@ -62,10 +62,7 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
           svg.append("g")
               .attr("class", "y axis")
               .call(yAxis)              
-              .selectAll(".y text")
-              .style("text-anchor", "middle")
-              .attr('dx', '-6em')
-              .call(wrap, 160)
+
 
 
           svg.selectAll(".bar")
@@ -117,7 +114,6 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
            .attr("font-size", "11px")
            .attr("fill", "white")
 
-
         }
 
       scope.update = function(data) {
@@ -152,30 +148,6 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
          .attr("x", function(d) {
           return x(d.hours) - 20
          })
-      }
-
-      function wrap(text, width) {
-        text.each(function() {
-          var text = d3.select(this),
-              words = text.text().split(/\s+/).reverse(),
-              word,
-              line = [],
-              lineNumber = 0,
-              lineHeight = 1.1, // ems
-              y = text.attr("y"),
-              dy = parseFloat(text.attr("dy")),
-              tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
-          while (word = words.pop()) {
-            line.push(word);
-            tspan.text(line.join(" "));
-            if (tspan.node().getComputedTextLength() > width) {
-              line.pop();
-              tspan.text(line.join(" "));
-              line = [word];
-              tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").attr('dx', '-6em').text(word);
-            }
-          }
-        });
       }
 
       

@@ -1,4 +1,4 @@
-app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3Service, $http) {
+app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function($scope, d3Service, $http, $timeout) {
 
   $scope.activity = 0
   $scope.set0 = 0
@@ -49,8 +49,16 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
 
   $scope.showGraph = function() {
     // $('.average').attr('checked', true)
+
     $scope.displayGraph = true
     $scope.labels = false
+
+    $timeout(function() {
+      d3.selectAll(".y text")
+      .style("text-anchor", "middle")
+      .attr('dx', '-6em')
+      .call(wrap, 160)
+    }, 0)
   }
 
   $scope.setData = function(elemCounter, value) {
@@ -110,6 +118,29 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
     })
 
 
+  function wrap(text, width) {
+    text.each(function() {
+      var text = d3.select(this),
+          words = text.text().split(/\s+/).reverse(),
+          word,
+          line = [],
+          lineNumber = 0,
+          lineHeight = 1.1, // ems
+          y = text.attr("y"),
+          dy = parseFloat(text.attr("dy")),
+          tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+      while (word = words.pop()) {
+        line.push(word);
+        tspan.text(line.join(" "));
+        if (tspan.node().getComputedTextLength() > width) {
+          line.pop();
+          tspan.text(line.join(" "));
+          line = [word];
+          tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").attr('dx', '-6em').text(word);
+        }
+      }
+    });
+  }
 
 
 }])
