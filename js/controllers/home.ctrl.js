@@ -71,6 +71,10 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
     $scope.totalHours = $scope.set0 + $scope.set1 + $scope.set2 + $scope.set3 + $scope.set4 + $scope.set5 + $scope.set6 + $scope.set7 + $scope.set8 + $scope.set9 + $scope.set10 + $scope.set11
     
     $scope.testData = $scope.averageData.concat($scope.personalData)
+    /////////////////////////////////////////////////
+    /////////////////////////////////////////////////
+    ////////////////////////////////////////////////
+    $scope.showGraph() 
   }
 
   $scope.filterGraph = function(group) {

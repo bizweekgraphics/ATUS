@@ -30,7 +30,7 @@
 }
 
 .noUi-base:after {
-  content: '24';
+  content: '12';
   position: absolute;
   /*position: relative;*/
   left: 97%;

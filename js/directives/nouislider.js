@@ -10,7 +10,7 @@ app.directive('slider', function() {
                   connect: 'lower',
                   range: {
                     'min': 0,
-                    'max': 24
+                    'max': 12
                   }
                 }).on('slide', function() {
                   scope.$apply(function() {

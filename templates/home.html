@@ -24,15 +24,12 @@
 </div>
 
 <div ng-hide="labels" class="graph-wrapper">
-  <div class="label-left">
   <label ng-repeat="item in checkboxArray" class="checkbox">
     <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
   </label>
-  </div>
   <a id="graph"></a>
-  <div class="label-right" d3-bar data="testData" show="displayGraph"></div>
+  <div d3-barh data="testData" show="displayGraph"></div>
 </div>
-<div class="clear"></div>
 
 </div>
 

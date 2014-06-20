@@ -1,7 +1,7 @@
-app.directive('d3Hbar', ['d3Service', function(d3Service) {
+app.directive('d3Barh', ['d3Service', function(d3Service) {
 
-    var margin = {top: 20, right: 20, bottom: 290, left: 40}
-    var width = 770 - margin.left - margin.right
+    var margin = {top: 20, right: 20, bottom: 30, left: 175}
+    var width = 970 - margin.left - margin.right
     var height = 850 - margin.top - margin.bottom
 
   return {
@@ -12,14 +12,13 @@ app.directive('d3Hbar', ['d3Service', function(d3Service) {
     },
     link: function(scope, element, attrs) {
       d3Service.d3().then(function(d3) {
-        var x = d3.scale.ordinal()
-          .rangeRoundBands([0, width], .1)
+        var y = d3.scale.ordinal()
+          .rangeRoundBands([0, height], .1)
 
         var x1 = d3.scale.ordinal()
 
-        var y = d3.scale.linear()
-          .domain([0, .1])
-          .range([height, 0])
+        var x = d3.scale.linear()
+          .range([0, width])
 
         var xAxis = d3.svg.axis()
           .scale(x)
@@ -48,8 +47,8 @@ app.directive('d3Hbar', ['d3Service', function(d3Service) {
         }, true)
 
         scope.render = function(data) {
-          x.domain(data.map(function(d) { return d.activity; }));
-          y.domain([0, 12])
+          y.domain(data.map(function(d) { return d.activity; }));
+          x.domain([0, 12])
 
           svg.append("g")
               .attr("class", "x axis")
@@ -57,64 +56,70 @@ app.directive('d3Hbar', ['d3Service', function(d3Service) {
               .call(xAxis)
               .selectAll(".x text")
               .style("text-anchor", "end")
-              .attr('transform', "rotate (-65)")
               .attr('dy', '1em')
 
 
           svg.append("g")
               .attr("class", "y axis")
               .call(yAxis)
-            .append("text")
-              .attr("transform", "rotate(-90)")
-              .attr("y", 6)
-              .attr("dy", ".71em")
-              .style("text-anchor", "end")
-              .text("Hours");
+            // .append("text")
+            //   .attr("transform", "rotate(-90)")
+            //   .attr("y", 6)
+            //   .attr("dy", ".71em")
+            //   .style("text-anchor", "end")
+            //   .text("Hours");
 
           svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
               .style('display', function(d) {
                 if(d.name === "ATUS") {
-                  return 'none'
+                  // return 'none'
                 }
               })
               .attr("class", "bar")
               .attr("x", function(d) {
-                var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/2
-                return xVal
+                // var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/2
+                // return xVal
+                return 0
               })
-              .attr("width", function() {
-                return x.rangeBand()/2})
-              .attr("y", function(d) { return y(d.hours); })
-              .attr("height", function(d) { return height - y(d.hours); })
+              .attr("width", function(d) {
+                return x(d.hours); 
+              })
+              .attr("y", function(d) { 
+                var yVal = d.name === "you" ? y(d.activity) : y(d.activity) + y.rangeBand()/2
+                return yVal
+              })
+              .attr("height", function(d) { 
+                return y.rangeBand()/2
+              })
               .style("fill", function(d) {
                 var color = d.name === "you" ? "blue" : "red"
                 return color
               })
         
-        svg.selectAll(".d3-tooltip")
-           .data(data)
-           .enter()
-           .append("text")
-           .text(function(d) {
-            if(d.hours > 0) {
-              return d.hours;
-            }
-           })
-           .attr("text-anchor", "middle")
-           .attr('class', 'd3-tooltip')
-            .attr("x", function(d) {
-                var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + x.rangeBand()/1.33
+        // svg.selectAll(".d3-tooltip")
+        //    .data(data)
+        //    .enter()
+        //    .append("text")
+        //    .text(function(d) {
+        //     if(d.hours > 0) {
+        //       return d.hours;
+        //     }
+        //    })
+        //    .attr("text-anchor", "middle")
+        //    .attr('class', 'd3-tooltip')
+        //     .attr("x", function(d) {
+        //         var xVal = d.name === "you" ? x(d.activity) : x(d.activity) + y.rangeBand()/1.33
 
-                return xVal
-              })
-           .attr("y", function(d) {
-            return y(d.hours) + 20
-           })
-           .attr("font-family", "sans-serif") 
-           .attr("font-size", "11px")
-           .attr("fill", "white")
+        //         return xVal
+        //       })
+        //    .attr("y", function(d) {
+        //     return y(d.hours) + 20
+        //    })
+        //    .attr("font-family", "sans-serif") 
+        //    .attr("font-size", "11px")
+        //    .attr("fill", "white")
 
 
         }
@@ -123,29 +128,34 @@ app.directive('d3Hbar', ['d3Service', function(d3Service) {
          svg.selectAll('rect')
             .data(data)
             .transition() 
-            .attr('y', function(d) {return y(d.hours)})
-            .attr('height', function(d) {return height - y(d.hours)})
+              .attr("y", function(d) { 
+                var yVal = d.name === "you" ? y(d.activity) : y(d.activity) + y.rangeBand()/2
+                return yVal
+              })
+              .attr("width", function(d) {
+                return x(d.hours); 
+              })
             .style('display', function(d) {
               if(d.name === "ATUS" && !scope.$parent.displayGraph) {
                 return 'hidden'
               } 
             })
 
-        svg.selectAll('.d3-tooltip')
-          .data(data)
-          .transition()
-          .text(function(d) {
-            if(d.hours > 0) {
-              return d.hours;
-            }
-          })
-          .attr("y", function(d) {
-            return y(d.hours) + 20
-          })
-          .attr("x", function(d) {
-            var xVal = d.name === "you" ? x(d.activity) + x.rangeBand()/4 : x(d.activity) + x.rangeBand()/1.33
-              return xVal
-          })
+        // svg.selectAll('.d3-tooltip')
+        //   .data(data)
+        //   .transition()
+        //   .text(function(d) {
+        //     if(d.hours > 0) {
+        //       return d.hours;
+        //     }
+        //   })
+        //   .attr("y", function(d) {
+        //     return y(d.hours) + 20
+        //   })
+        //   .attr("x", function(d) {
+        //     var xVal = d.name === "you" ? x(d.activity) + x.rangeBand()/4 : x(d.activity) + x.rangeBand()/1.33
+        //       return xVal
+        //   })
       }
       
       setTimeout(function() {
