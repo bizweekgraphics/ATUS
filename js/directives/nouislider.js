@@ -7,6 +7,7 @@ app.directive('slider', function() {
                 $(elem).noUiSlider({
                   start: 0,
                   step: 0.25,
+                  connect: 'lower',
                   range: {
                     'min': 0,
                     'max': 24

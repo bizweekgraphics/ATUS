@@ -1,4 +1,4 @@
-app.directive('d3Bar', ['d3Service', function(d3Service) {
+app.directive('d3Hbar', ['d3Service', function(d3Service) {
 
     var margin = {top: 20, right: 20, bottom: 290, left: 40}
     var width = 770 - margin.left - margin.right

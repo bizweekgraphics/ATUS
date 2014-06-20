@@ -34,13 +34,20 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
   }
 
   $scope.checkHours = function() {
-    return $scope.totalHours === 24
+    return $scope.totalHours != 24
   }
 
   $scope.displayGraph = false
+  $scope.labels = true
+  // $scope.labels = false
+  // $scope.displayGraph = true
+  
+
+
   $scope.showGraph = function() {
     // $('.average').attr('checked', true)
     $scope.displayGraph = true
+    $scope.labels = false
   }
 
   $scope.setData = function(elemCounter, value) {
@@ -51,8 +58,8 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
       {"name":"you","activity":"Eating and drinking","hours": $scope.set1,"counter":"set1"},
       {"name":"you","activity":"Household activities","hours": $scope.set2,"counter":"set2"},
       {"name":"you","activity":"Purchasing goods and services","hours": $scope.set3,"counter":"set3"},
-      {"name":"you","activity":"Caring for and helping household members","hours": $scope.set4,"counter":"set4"},
-      {"name":"you","activity":"Caring for and helping non-household members","hours": $scope.set5,"counter":"set5"},
+      {"name":"you","activity":"Caring for/helping household members","hours": $scope.set4,"counter":"set4"},
+      {"name":"you","activity":"Caring for/helping non-household members","hours": $scope.set5,"counter":"set5"},
       {"name":"you","activity":"Working and work-related activities","hours": $scope.set6,"counter":"set6"},
       {"name":"you","activity":"Educational activities","hours": $scope.set7,"counter":"set7"},
       {"name":"you","activity":"Organizational civic and religious activities","hours": $scope.set8,"counter":"set8"},

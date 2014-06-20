@@ -60,9 +60,9 @@
         "Other marital statuses Men": 9.57,
         "Other marital statuses Women": 10.02,
         "Less than a high school diploma": 9.88,
-        "High school graduates, no college": 9.54,
+        "High school graduate, no college": 9.54,
         "Some college or associate degree": 9.39,
-        "Bachelor’s degree and higher": 9.15
+        "Bachelor's degree and higher": 9.15
     },
     {
         "activity": "Eating and drinking",
@@ -125,9 +125,9 @@
         "Other marital statuses Men": 1.18,
         "Other marital statuses Women": 1.1,
         "Less than a high school diploma": 1.11,
-        "High school graduates, no college": 1.19,
+        "High school graduate, no college": 1.19,
         "Some college or associate degree": 1.19,
-        "Bachelor’s degree and higher": 1.39
+        "Bachelor's degree and higher": 1.39
     },
     {
         "activity": "Household activities",
@@ -190,9 +190,9 @@
         "Other marital statuses Men": 1.12,
         "Other marital statuses Women": 1.76,
         "Less than a high school diploma": 2.17,
-        "High school graduates, no college": 2.15,
+        "High school graduate, no college": 2.15,
         "Some college or associate degree": 1.91,
-        "Bachelor’s degree and higher": 1.79
+        "Bachelor's degree and higher": 1.79
     },
     {
         "activity": "Purchasing goods and services",
@@ -255,12 +255,12 @@
         "Other marital statuses Men": 0.59,
         "Other marital statuses Women": 0.81,
         "Less than a high school diploma": 0.57,
-        "High school graduates, no college": 0.77,
+        "High school graduate, no college": 0.77,
         "Some college or associate degree": 0.81,
-        "Bachelor’s degree and higher": 0.84
+        "Bachelor's degree and higher": 0.84
     },
     {
-        "activity": "Caring for and helping household members",
+        "activity": "Caring for/helping household members",
         "nested": "Caring for and helping household children, caring for and helping household adults, travel related to caring for and helping household members",
         "Average American": ".53",
         "Men": ".36",
@@ -320,12 +320,12 @@
         "Other marital statuses Men": 0.14,
         "Other marital statuses Women": 0.44,
         "Less than a high school diploma": 0.57,
-        "High school graduates, no college": 0.44,
+        "High school graduate, no college": 0.44,
         "Some college or associate degree": 0.61,
-        "Bachelor’s degree and higher": 0.69
+        "Bachelor's degree and higher": 0.69
     },
     {
-        "activity": "Caring for and helping non-household members",
+        "activity": "Caring for/helping non-household members",
         "nested": "Travel related to caring for and helping nonhousehold members",
         "Average American": ".19",
         "Men": ".17",
@@ -385,9 +385,9 @@
         "Other marital statuses Men": 0.19,
         "Other marital statuses Women": 0.25,
         "Less than a high school diploma": 0.18,
-        "High school graduates, no college": 0.23,
+        "High school graduate, no college": 0.23,
         "Some college or associate degree": 0.2,
-        "Bachelor’s degree and higher": 0.17
+        "Bachelor's degree and higher": 0.17
     },
     {
         "activity": "Working and work-related activities",
@@ -450,9 +450,9 @@
         "Other marital statuses Men": 3.48,
         "Other marital statuses Women": 2.62,
         "Less than a high school diploma": 2.46,
-        "High school graduates, no college": 3.24,
+        "High school graduate, no college": 3.24,
         "Some college or associate degree": 3.78,
-        "Bachelor’s degree and higher": 4.4
+        "Bachelor's degree and higher": 4.4
     },
     {
         "activity": "Educational activities",
@@ -484,12 +484,12 @@
         "15 years and over Men": ".47",
         "15-19 Men": "3.09",
         "20-24 Men": "1.13",
-        "25-34 Men": "( 3",
+        "25-34 Men": null,
         "35-44 Men": ".05",
         "45-54 Men": ".05",
         "55-64 Men": "~0",
         "65-74 Men": "~0",
-        "75+ Men": "( 3",
+        "75+ Men": null,
         "15 years and over Women": ".48",
         "15-19 Women": "3.74",
         "20-24 Women": ".98",
@@ -515,9 +515,9 @@
         "Other marital statuses Men": 0.95,
         "Other marital statuses Women": 0.87,
         "Less than a high school diploma": 0,
-        "High school graduates, no college": 0.04,
+        "High school graduate, no college": 0.04,
         "Some college or associate degree": 0.23,
-        "Bachelor’s degree and higher": 0.14
+        "Bachelor's degree and higher": 0.14
     },
     {
         "activity": "Organizational civic and religious activities",
@@ -580,9 +580,9 @@
         "Other marital statuses Men": 0.23,
         "Other marital statuses Women": 0.31,
         "Less than a high school diploma": 0.35,
-        "High school graduates, no college": 0.3,
+        "High school graduate, no college": 0.3,
         "Some college or associate degree": 0.31,
-        "Bachelor’s degree and higher": 0.4
+        "Bachelor's degree and higher": 0.4
     },
     {
         "activity": "Leisure and sports",
@@ -645,9 +645,9 @@
         "Other marital statuses Men": 6.12,
         "Other marital statuses Women": 5.25,
         "Less than a high school diploma": 6.29,
-        "High school graduates, no college": 5.69,
+        "High school graduate, no college": 5.69,
         "Some college or associate degree": 5.1,
-        "Bachelor’s degree and higher": 4.57
+        "Bachelor's degree and higher": 4.57
     },
     {
         "activity": "Telephone calls mail and email",
@@ -710,9 +710,9 @@
         "Other marital statuses Men": 0.12,
         "Other marital statuses Women": 0.21,
         "Less than a high school diploma": 0.08,
-        "High school graduates, no college": 0.14,
+        "High school graduate, no college": 0.14,
         "Some college or associate degree": 0.15,
-        "Bachelor’s degree and higher": 0.18
+        "Bachelor's degree and higher": 0.18
     },
     {
         "activity": "Other activities not elsewhere classified",
@@ -751,7 +751,7 @@
         "75+ Men": ".31",
         "15 years and over Women": ".35",
         "15-19 Women": ".38",
-        "20-24 Women": "( 3",
+        "20-24 Women": null,
         "25-34 Women": ".37",
         "35-44 Women": ".32",
         "45-54 Women": ".26",
@@ -774,8 +774,8 @@
         "Other marital statuses Men": 0.32,
         "Other marital statuses Women": 0.35,
         "Less than a high school diploma": 0.34,
-        "High school graduates, no college": 0.26,
+        "High school graduate, no college": 0.26,
         "Some college or associate degree": 0.31,
-        "Bachelor’s degree and higher": 0.29
+        "Bachelor's degree and higher": 0.29
     }
 ]

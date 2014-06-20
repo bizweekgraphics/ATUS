@@ -1,5 +1,14 @@
 .wrapper {
   width: 970px;
+  height: 10000px;
+}
+
+#title {
+  text-align: center;
+}
+
+#title-p {
+  text-align: center;
 }
 
 #left {
@@ -23,14 +32,42 @@
   clear: both;
 }
 
+.button-wrapper {
+  text-align: center;
+}
+
+.show-button {
+  display: block;
+  margin: 0 auto;
+}
+
+.submit-button {
+  display: block;
+  margin: 0 auto;
+  color: green;
+}
+
+.total {
+  text-align: center;
+}
+
 h4 {
   margin-left: 1em;
   font-family: sans-serif;
 }
 
-.center {
-  text-align: center;
-  margin: 0 auto;
+.graph-wrapper {
+  width: 970px;
+}
+
+.label-left {
+  margin-left: 10px;
+  width: 190px;
+  float:left;
+}
+
+.label-right {
+  margin-left: 200px;
 }
 
 .axis {

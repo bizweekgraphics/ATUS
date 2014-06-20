@@ -1,4 +1,4 @@
-var app = angular.module("ATUS", ['ngResource', 'ngRoute', 'd3', 'ui.bootstrap']);
+var app = angular.module("ATUS", ['ngResource', 'ngRoute', 'd3', 'ui.bootstrap', 'angularSmoothscroll']);
 
 app.config(function($routeProvider){
   $routeProvider
