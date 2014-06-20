@@ -26,7 +26,9 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
 
   $scope.displayGraph = false
   $scope.showGraph = function() {
+    $('.average').attr('checked', true)
     $scope.displayGraph = true
+
   }
 
   $scope.showCheck = function(event) {

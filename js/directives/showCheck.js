@@ -1,12 +1,14 @@
 app.directive('showCheck', function() {
   return {
     link:function(scope, element) {
-      $(element).on('click', function(event) {
+      $(element).on('click', {scope: scope}, function(event) {
           var element = event.target
           var elementChecked = element.checked
           var elClass = $(element).attr('class').split(' ')[0]
           $('.' + elClass).attr('checked', false)
           element.checked = elementChecked
+          debugger;
+          scope.$parent.updateGraph()
           switch(elClass) {
             case "average":
               $('.day').attr('disabled', elementChecked)
