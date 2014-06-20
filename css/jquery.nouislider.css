@@ -18,6 +18,28 @@
   height: 100%;
   position: relative;
 }
+
+.noUi-base:before {
+  content: '0';
+  /*position: relative;*/
+  position: absolute;
+  font-family: sans-serif;
+  /*font-size: 1.5em;*/
+  bottom: -120%;
+  left: 0%;
+}
+
+.noUi-base:after {
+  content: '24';
+  position: absolute;
+  /*position: relative;*/
+  left: 97%;
+  bottom: -120%;
+  font-family: sans-serif;
+  /*font-size: 1.5em;*/
+}
+
+
 .noUi-origin {
   position: absolute;
   right: 0;

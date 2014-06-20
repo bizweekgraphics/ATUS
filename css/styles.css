@@ -28,6 +28,11 @@ h4 {
   font-family: sans-serif;
 }
 
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .axis {
   font: 15px sans-serif;
 }

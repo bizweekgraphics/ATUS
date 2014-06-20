@@ -13,13 +13,11 @@
   </div>
   <div class="clear"></div>
 
-Total Hours: {{totalHours}}
+<span>Total Hours: {{totalHours}}</span>
 <br>
-<button ng-show="checkHours()" ng-click="showGraph()">Reveal</button>
-<!-- <button ng-click="filterGraph('average hours men')">Average Hours Men</button>
-<button ng-click="filterGraph('average hours women')">Average Hours Women</button>
-<button ng-click="filterGraph('weekend')">Weekend/Holiday</button>
-<button ng-click="filterGraph('weekday')">Weekday</button> -->
+<button ng-show="checkHours()" ng-click="showGraph()">How do you compare to the average American?</button>
+<br>
+
 <label ng-repeat="item in checkboxArray" class="checkbox-inline">
   <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
 </label>
@@ -29,4 +27,5 @@ Total Hours: {{totalHours}}
 
 <div d3-bar data="testData" show="displayGraph"></div>
 </div>
+
 
