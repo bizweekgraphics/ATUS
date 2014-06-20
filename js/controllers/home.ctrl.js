@@ -37,11 +37,14 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
     return $scope.totalHours != 24
   }
 
+  $scope.more = true
+
   $scope.displayGraph = false
   $scope.labels = true
   // $scope.labels = false
   // $scope.displayGraph = true
-  
+
+
 
 
   $scope.showGraph = function() {
@@ -70,11 +73,16 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
 
     $scope.totalHours = $scope.set0 + $scope.set1 + $scope.set2 + $scope.set3 + $scope.set4 + $scope.set5 + $scope.set6 + $scope.set7 + $scope.set8 + $scope.set9 + $scope.set10 + $scope.set11
     
+    $scope.hoursRemaining = Math.abs($scope.totalHours - 24)
+    
+    if($scope.totalHours < 24) {
+      $scope.more = true
+    } else if ($scope.totalHours > 24) {
+      $scope.more = false
+    }
+
+
     $scope.testData = $scope.averageData.concat($scope.personalData)
-    /////////////////////////////////////////////////
-    /////////////////////////////////////////////////
-    ////////////////////////////////////////////////
-    $scope.showGraph() 
   }
 
   $scope.filterGraph = function(group) {
