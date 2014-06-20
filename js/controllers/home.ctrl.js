@@ -27,6 +27,9 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
         elArray.push($(el).attr('id'))
       }
     })
+    if(elArray[0] === "Men" || elArray[0] === "Women") {
+      elArray = elArray.reverse()
+    }
     $scope.filterGraph(elArray.join(' '))
   }
 
