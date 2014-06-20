@@ -7,7 +7,6 @@ app.directive('showCheck', function() {
           var elClass = $(element).attr('class').split(' ')[0]
           $('.' + elClass).attr('checked', false)
           element.checked = elementChecked
-          debugger;
           scope.$parent.updateGraph()
           switch(elClass) {
             case "average":

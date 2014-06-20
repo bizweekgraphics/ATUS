@@ -20,19 +20,24 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
 
   $scope.totalHours = 0
 
+  $scope.updateGraph = function() {
+    var elArray = []
+    $('.checkbox').each(function(index, el) {
+      if(el.checked) {
+        elArray.push($(el).attr('id'))
+      }
+    })
+    $scope.filterGraph(elArray.join(' '))
+  }
+
   $scope.checkHours = function() {
     return $scope.totalHours === 24
   }
 
   $scope.displayGraph = false
   $scope.showGraph = function() {
-    $('.average').attr('checked', true)
+    // $('.average').attr('checked', true)
     $scope.displayGraph = true
-
-  }
-
-  $scope.showCheck = function(event) {
-    debugger;
   }
 
   $scope.setData = function(elemCounter, value) {
@@ -59,6 +64,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
   }
 
   $scope.filterGraph = function(group) {
+    group = group.trim()
     $http.get('/data/updateddata.json')
     .then(function(res) {
       $scope.averageData = []
@@ -74,7 +80,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', function($scope, d3S
     })
   }
 
-  $scope.filterGraph('average hours total')
+  $scope.filterGraph('Average American')
 
   $http.get('/data/categories.json')
     .then(function(res) {
