@@ -60,6 +60,19 @@ h4 {
   width: 970px;
 }
 
+.label-wrapper {
+  display: table;
+  margin: 0 auto;
+}
+
+.label-wrapper div {
+  width: 150px;
+  margin-right: 10px;
+  float: none;
+  display: table-cell; 
+  vertical-align: top;
+}
+
 .label-left {
   margin-left: 10px;
   width: 190px;

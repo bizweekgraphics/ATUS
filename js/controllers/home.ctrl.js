@@ -44,9 +44,6 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   // $scope.labels = false
   // $scope.displayGraph = true
 
-
-
-
   $scope.showGraph = function() {
     // $('.average').attr('checked', true)
 

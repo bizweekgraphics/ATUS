@@ -15,7 +15,7 @@
   </div>
   <div class="clear"></div>
 
-<div class="total"><h4>Total Hours: {{totalHours}}</h4></div>
+<!-- <div class="total"><h4>Total Hours: {{totalHours}}</h4></div> -->
 <br>
 <div class="button-wrapper">
 
@@ -25,10 +25,46 @@
 </div>
 
 <div ng-hide="labels" class="graph-wrapper">
-  <label ng-repeat="item in checkboxArray" class="checkbox">
-    <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
-  </label>
   <a id="graph"></a>
+  <div class="label-wrapper">
+  <div>
+    <h4>All</h4>
+    <label ng-repeat="item in checkboxArray.slice(0, 1)" class="checkbox">
+      <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
+    </label>
+  </div>
+  <div>
+    <h4>Gender</h4>
+    <label ng-repeat="item in checkboxArray.slice(1, 3)" class="checkbox">
+      <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
+    </label>
+  </div>
+  <div>
+    <h4>Day</h4>
+    <label ng-repeat="item in checkboxArray.slice(3, 5)" class="checkbox">
+      <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
+    </label>
+  </div>
+  <div>
+    <h4>Age</h4>
+    <label ng-repeat="item in checkboxArray.slice(5, 12)" class="checkbox">
+      <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
+    </label>
+  </div>
+  <div>
+    <h4>Race</h4>
+    <label ng-repeat="item in checkboxArray.slice(12, 15)" class="checkbox">
+      <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
+    </label>
+  </div>
+  <div>
+    <h4>Education Level</h4>
+    <label ng-repeat="item in checkboxArray.slice(15, 21)" class="checkbox">
+      <input type="checkbox" id="{{item.label}}" class="{{item.group}} checkbox" name="{{item.group}}" show-check> {{item.label}}
+    </label>
+  </div>
+  </div>
+  </br>
   <div d3-barh data="testData" show="displayGraph"></div>
 </div>
 
