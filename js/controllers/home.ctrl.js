@@ -93,7 +93,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   $scope.filterGraph = function(group) {
     group = group.trim()
-    $http.get('/data/updateddata.json')
+    $http.get('data/updateddata.json')
     .then(function(res) {
       $scope.averageData = []
       $scope.personalData = []
@@ -110,7 +110,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   $scope.filterGraph('Average American')
 
-  $http.get('/data/categories.json')
+  $http.get('data/categories.json')
     .then(function(res) {
       var data = res.data
       $scope.average = filterGroup(data, 'average')
