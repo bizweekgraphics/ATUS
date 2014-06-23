@@ -114,6 +114,41 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
            .attr("font-size", "11px")
            .attr("fill", "white")
 
+
+      var legend = svg.selectAll('.legend')
+          .data([data[23], data[0]])
+          .enter()
+        .append('g')
+          .attr('class', 'legend');
+        
+      legend.append('rect')
+          .attr('x', function(d, i) {
+            return (width - (100 * i)) - 50
+          })
+          .attr('y', -20)
+          .attr('width', 10)
+          .attr('height', 10)
+          .style('fill', function(d) { 
+            if(d.name === "you") {
+              return 'blue'
+            } else {
+              return 'red'
+            }
+          });
+          
+      legend.append('text')
+          .attr('x', function(d, i) {
+            return (width - (100 * i)) - 30
+          })
+          .attr('y', -10)
+          .text(function(d){
+            if(d.name ==="you") {
+              return "You"
+            } else {
+              return "Average"
+            }
+          });
+
         }
 
       scope.update = function(data) {

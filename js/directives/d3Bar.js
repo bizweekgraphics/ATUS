@@ -117,6 +117,8 @@ app.directive('d3Bar', ['d3Service', function(d3Service) {
            .attr("fill", "white")
 
 
+
+
         }
 
       scope.update = function(data) {
