@@ -1,6 +1,6 @@
 app.directive('d3Barh', ['d3Service', function(d3Service) {
 
-    var margin = {top: 20, right: 20, bottom: 30, left: 175}
+    var margin = {top: 20, right: 20, bottom: 55, left: 175}
     var width = 970 - margin.left - margin.right
     var height = 850 - margin.top - margin.bottom
 
@@ -148,11 +148,40 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
               return "Average"
             }
           });
+      }
 
-        }
+
 
       scope.update = function(data) {
-         svg.selectAll('rect')
+
+        var addFooter = function() {
+          d3.select('svg')
+          .append('text')
+          .attr('class', 'footer')
+          .attr('x', width - 475)
+          .attr('y', 840)
+          .text('*Estimate is suppressed because it does not meet the American Time Use Survey publication standards')
+        }
+
+        var removeFooter = function() {
+          d3.select('.footer').remove()
+        }
+
+        removeFooter()
+
+        d3.selectAll('.y text')
+          .data(data)
+          .text(function(d) {
+            if(d.hours === null) {
+              addFooter()
+              return d.activity + '*'
+            } else {
+              return d.activity
+            }
+          }) 
+
+
+        svg.selectAll('rect')
             .data(data)
             .transition() 
               .attr("y", function(d) { 
@@ -176,13 +205,19 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
               return d.hours;
             }
           })
-            .attr("y", function(d) {
-                var yVal = d.name === "you" ? y(d.activity) + 20 : y(d.activity) + y.rangeBand()/1.2
+          .attr("y", function(d) {
+            var yVal = d.name === "you" ? y(d.activity) + 20 : y(d.activity) + y.rangeBand()/1.2
                 return yVal
               })
          .attr("x", function(d) {
           return x(d.hours) - 20
          })
+
+         d3.selectAll(".y text")
+         .style("text-anchor", "middle")
+         .attr('dx', '-6em')
+         .call(wrap, 160)
+
       }
 
       
@@ -190,7 +225,33 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
         scope.render(scope.data)    
       }, 0)
 
+      function wrap(text, width) {
+        console.log('wrap')
+        text.each(function() {
+          var text = d3.select(this),
+              words = text.text().split(/\s+/).reverse(),
+              word,
+              line = [],
+              lineNumber = 0,
+              lineHeight = 1.1, // ems
+              y = text.attr("y"),
+              dy = parseFloat(text.attr("dy")),
+              tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dy", dy + "em");
+          while (word = words.pop()) {
+            line.push(word);
+            tspan.text(line.join(" "));
+            if (tspan.node().getComputedTextLength() > width) {
+              line.pop();
+              tspan.text(line.join(" "));
+              line = [word];
+              tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").attr('dx', '-6em').text(word);
+            }
+          }
+        });
+      }
+
       })
     }
   }
 }])
+
