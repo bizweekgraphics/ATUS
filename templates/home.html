@@ -26,44 +26,12 @@
 
 <div ng-hide="labels" class="graph-wrapper">
   <div class="label-wrapper">
-  <div>
-    <h4>All</h4>
-  <a id="graph"></a>
-
-    <label ng-repeat="item in checkboxArray.slice(0, 1)" class="checkbox">
-      <checkboxes item="item">
-    </label>
-  </div>
-  <div>
-    <h4>Gender</h4>
-    <label ng-repeat="item in checkboxArray.slice(1, 3)" class="checkbox">
-      <checkboxes item="item">
-    </label>
-  </div>
-  <div>
-    <h4>Day</h4>
-    <label ng-repeat="item in checkboxArray.slice(3, 5)" class="checkbox">
-      <checkboxes item="item">
-    </label>
-  </div>
-  <div>
-    <h4>Age</h4>
-    <label ng-repeat="item in checkboxArray.slice(5, 12)" class="checkbox">
-      <checkboxes item="item">
-    </label>
-  </div>
-  <div>
-    <h4>Race</h4>
-    <label ng-repeat="item in checkboxArray.slice(12, 15)" class="checkbox">
-      <checkboxes item="item">
-    </label>
-  </div>
-  <div>
-    <h4>Education</h4>
-    <label ng-repeat="item in checkboxArray.slice(15, 21)" class="checkbox">
-      <checkboxes item="item">
-    </label>
-  </div>
+    <checkboxes group="average"></checkboxes>
+    <checkboxes group="gender"></checkboxes>
+    <checkboxes group="day"></checkboxes>
+    <checkboxes group="age"></checkboxes>
+    <checkboxes group="race"></checkboxes>
+    <checkboxes group="education"></checkboxes>
   </div>
   <div d3-barh data="testData" show="displayGraph"></div>
 </div>

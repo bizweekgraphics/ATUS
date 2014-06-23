@@ -21,12 +21,14 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.totalHours = 0
 
   $scope.updateGraph = function() {
+
     var elArray = []
     $('.checkbox').each(function(index, el) {
-      if(el.checked) {
+      if(el.checked && $(el).attr('class') != "all") {
         elArray.push($(el).attr('id'))
       }
     })
+
     if(elArray[0] === "Men" || elArray[0] === "Women") {
       elArray = elArray.reverse()
     }
@@ -104,8 +106,21 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   $http.get('/data/categories.json')
     .then(function(res) {
-      $scope.checkboxArray = res.data
+      var data = res.data
+      $scope.average = filterGroup(data, 'average')
+      $scope.gender = filterGroup(data, 'gender')
+      $scope.day = filterGroup(data, 'day')
+      $scope.age = filterGroup(data, 'age')
+      $scope.race = filterGroup(data, 'race')
+      $scope.education = filterGroup(data, 'education')
     })
+
+  var filterGroup = function(data, group) {
+    return data.filter(function(item) {
+      return item.group === group
+    })
+  }
+
 }])
 
 

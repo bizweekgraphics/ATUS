@@ -2,7 +2,7 @@ app.directive('checkboxes', [function() {
   return {
     restrict: 'E',
     scope: {
-      item: '=item',
+      group: '=group',
     },
     templateUrl: 'templates/label.html'
   }
