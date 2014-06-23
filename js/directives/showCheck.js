@@ -17,7 +17,7 @@ app.directive('showCheck', function() {
             var elementChecked = element.checked          
           }
           scope.$parent.$parent.updateGraph()
-          $('.radio').attr('disabled', false)
+          $('.radio-input').attr('disabled', false)
           if(checkedArray.length > 0) {
             checkedArray.forEach(function(elClass) {
               switch(elClass) {
@@ -67,9 +67,9 @@ app.directive('showCheck', function() {
           } else {
             $('.radio-input').attr('disabled', false)  
           }  
-        $('.radio').each(function(index, item) {
+        $('.radio-input').each(function(index, item) {
           if(item.disabled) {
-            $(item).parent().css('opacity', .2)
+            $(item).parent().css('opacity', .4)
           } else {
             $(item).parent().css('opacity', 1)
           }
