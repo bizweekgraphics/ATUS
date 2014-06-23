@@ -23,7 +23,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.updateGraph = function() {
 
     var elArray = []
-    $('.checkbox').each(function(index, el) {
+    $('.radio').each(function(index, el) {
       if(el.checked && $(el).attr('class') != "all") {
         elArray.push($(el).attr('id'))
       }
