@@ -6,7 +6,7 @@ array.forEach(function(item) {
 
 
 When Gender is checked -> Day, education is disabled
-When Average is checked -> Day, Education, Race, Age is disabled
+When Average is checked -> Day, Education, Race, Age, Gender is disabled
 When Race is checked -> Day, Education, Age is disabled
 When Education is checked -> Day, Race, Gender is disabled
-When Age is checked -> Day, Race, Education is disabled
+When Age is checked -> Day, Race, Education, Gender is disabled

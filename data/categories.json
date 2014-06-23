@@ -4,6 +4,27 @@
         "group": "average"
     },
     {
+        "label": "All",
+        "group": "gender"
+    },
+    {
+        "label": "All",
+        "group": "age"
+    },
+    {
+        "label": "All",
+        "group": "race"
+    },
+    {
+        "label": "All",
+        "group": "education"
+    },
+    {
+        "label": "All",
+        "group": "day"
+    },
+
+    {
         "label": "Men",
         "group": "gender"
     },

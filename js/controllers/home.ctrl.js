@@ -23,16 +23,21 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.updateGraph = function() {
 
     var elArray = []
-    $('.radio').each(function(index, el) {
-      if(el.checked && $(el).attr('class') != "all") {
-        elArray.push($(el).attr('id'))
+    $('.radio-input').each(function(index, el) {
+      if(el.checked && !/All/.test($(el).attr('id'))) {
+        elArray.push($(el).attr('id').split('split')[0])
       }
     })
 
     if(elArray[0] === "Men" || elArray[0] === "Women") {
       elArray = elArray.reverse()
     }
-    $scope.filterGraph(elArray.join(' '))
+
+    if(elArray.length > 0) {
+      $scope.filterGraph(elArray.join(' '))    
+    } else {
+      $scope.filterGraph('Average American')
+    }
   }
 
   $scope.checkHours = function() {
@@ -43,12 +48,13 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   $scope.displayGraph = false
   $scope.labels = true
-  // $scope.labels = false
-  // $scope.displayGraph = true
 
   $scope.showGraph = function() {
-    // $('.average').attr('checked', true)
-
+    $('#Allsplitgender').attr('checked', true)
+    $('#Allsplitage').attr('checked', true)
+    $('#Allsplitrace').attr('checked', true)
+    $('#Allspliteducation').attr('checked', true)
+    $('#Allsplitday').attr('checked', true)
     $scope.displayGraph = true
     $scope.labels = false
   }
