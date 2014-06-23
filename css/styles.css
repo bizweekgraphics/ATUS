@@ -67,6 +67,7 @@ h4 {
 
 .label-wrapper div {
   width: 150px;
+  padding: 0px 10px 0px 10px;
   margin-right: 10px;
   float: none;
   display: table-cell; 

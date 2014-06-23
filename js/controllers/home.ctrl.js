@@ -72,7 +72,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
       {"name":"you","activity":"Educational activities","hours": $scope.set7,"counter":"set7"},
       {"name":"you","activity":"Organizational civic and religious activities","hours": $scope.set8,"counter":"set8"},
       {"name":"you","activity":"Leisure and sports","hours": $scope.set9,"counter":"set9"},
-      {"name":"you","activity":"Telephone calls mail and email","hours": $scope.set10,"counter":"set1 $scope.set0"},
+      {"name":"you","activity":"Telephone calls, mail, and email","hours": $scope.set10,"counter":"set1 $scope.set0"},
       {"name":"you","activity":"Other activities not elsewhere classified","hours": $scope.set11,"counter":"set11"}
     ]
 

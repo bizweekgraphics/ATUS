@@ -21,6 +21,13 @@ app.directive('showCheck', function() {
               $('.education').attr('disabled', elementChecked)
               $('.average').attr('disabled', elementChecked)
               break;
+            case "day":
+              $('.average').attr('disabled', elementChecked)
+              $('.education').attr('disabled', elementChecked)
+              $('.race').attr('disabled', elementChecked)
+              $('.age').attr('disabled', elementChecked)
+              $('.gender').attr('disabled', elementChecked)
+              break;
             case "race":
               $('.day').attr('disabled', elementChecked)
               $('.education').attr('disabled', elementChecked)
