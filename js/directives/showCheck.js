@@ -10,18 +10,19 @@ app.directive('showCheck', function() {
           }
 
           var element = event.target
+          var elementId = $(element).attr('id')
           var checkedArray = []
           $('.radio-input').each(function(index, item) {
             var radioEl = $(item)
-            if(!/All/.test(radioEl.attr('id')) && item.checked === true) {
-              checkedArray.push($(item).attr('class').split(' ')[0])
+            var allEl = /All/.test(radioEl.attr('id'))
+            if(!allEl && item.checked === true) {
+              var elClass = $(item).attr('class').split(' ')[0]
+              checkedArray.push(elClass)
             }
           })
-          if(/All/.test($(element).attr('id'))) {
-            var elementChecked = false
-          } else {
-            var elementChecked = element.checked          
-          }
+
+          var elementChecked = /All/.test(elementId) ? false : element.checked
+
           scope.$parent.$parent.updateGraph()
           $('.radio-input').attr('disabled', false)
           if(checkedArray.length > 0) {
@@ -51,11 +52,8 @@ app.directive('showCheck', function() {
             $('.radio-input').attr('disabled', false)  
           }  
         $('.radio-input').each(function(index, item) {
-          if(item.disabled) {
-            $(item).parent().css('opacity', .4)
-          } else {
-            $(item).parent().css('opacity', 1)
-          }
+          var el = $(item).parent()
+          item.disabled === true ? el.css('opacity', .4) : el.css('opacity', 1)
         })
       })
     }

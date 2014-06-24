@@ -24,8 +24,9 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
     var elArray = []
     $('.radio-input').each(function(index, el) {
-      if(el.checked && !/All/.test($(el).attr('id'))) {
-        elArray.push($(el).attr('id').split('split')[0])
+      elementId = $(el).attr('id')
+      if(el.checked && !/All/.test(elementId) {
+        elArray.push(elementId.split('split')[0])
       }
     })
 
@@ -33,11 +34,9 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
       elArray = elArray.reverse()
     }
 
-    if(elArray.length > 0) {
-      $scope.filterGraph(elArray.join(' '))    
-    } else {
-      $scope.filterGraph('Average American')
-    }
+    var query = elArray.length > 0 ? elArray.join(' ') : 'Average American'
+    $scope.filterGraph(query)
+
   }
 
   $scope.checkHours = function() {
