@@ -3,6 +3,12 @@ app.directive('showCheck', function() {
     link:function(scope, element) {
       $(element).on('click', function(event) {
 
+          var disableEl = function(array) {
+            array.forEach(function(item) {
+              $(item).attr('disabled', true)
+            })
+          }
+
           var element = event.target
           var checkedArray = []
           $('.radio-input').each(function(index, item) {
@@ -21,43 +27,20 @@ app.directive('showCheck', function() {
           if(checkedArray.length > 0) {
             checkedArray.forEach(function(elClass) {
               switch(elClass) {
-                case "average":
-                  $('.day').attr('disabled', true)
-                  $('.education').attr('disabled', true)
-                  $('.race').attr('disabled', true)
-                  $('.age').attr('disabled', true)
-                  $('.gender').attr('disabled', true)
-                  break;
                 case "gender":
-                  $('.day').attr('disabled', true)
-                  $('.education').attr('disabled', true)
-                  $('.average').attr('disabled', true)
+                  disableEl(['.day', '.education', '.average'])
                   break;
                 case "day":
-                  $('.average').attr('disabled', true)
-                  $('.education').attr('disabled', true)
-                  $('.race').attr('disabled', true)
-                  $('.age').attr('disabled', true)
-                  $('.gender').attr('disabled', true)
+                  disableEl(['.education', '.race', '.age', '.gender'])
                   break;
                 case "race":
-                  $('.day').attr('disabled', true)
-                  $('.education').attr('disabled', true)
-                  $('.age').attr('disabled', true)
-                  $('.average').attr('disabled', true)
+                  disableEl(['.day', '.education', '.age'])
                   break;
                 case "education":
-                  $('.day').attr('disabled', true)
-                  $('.race').attr('disabled', true)
-                  $('.gender').attr('disabled', true)
-                  $('.average').attr('disabled', true)
-                  $('.age').attr('disabled', true)
+                  disableEl(['.day', '.race', '.gender', '.age'])
                   break;
                 case "age":
-                  $('.day').attr('disabled', true)
-                  $('.education').attr('disabled', true)
-                  $('.race').attr('disabled', true)
-                  $('.average').attr('disabled', true)
+                  disableEl(['.day', '.education', '.race'])
                   break;
                default:
                   $('.radio-input').attr('disabled', false)
