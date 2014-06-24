@@ -19,12 +19,12 @@
 <br>
 <div class="button-wrapper">
 
-<a href="" smooth-scroll target="graph"><button class="pure-button" ng-class="{'pure-button-primary': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit <span ng-show="checkHours()">({{hoursRemaining}} hours <span ng-show="more">more</span> <span ng-hide="more">less</span> to enable)</span></button></a>
+<a href="" smooth-scroll target="graph-wrapper"><button class="pure-button" ng-class="{'pure-button-primary': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit <span ng-show="checkHours()">({{hoursRemaining}} hours <span ng-show="more">more</span> <span ng-hide="more">less</span> to enable)</span></button></a>
 
 <br>
 </div>
 
-<div ng-hide="labels" class="graph-wrapper">
+<div ng-hide="labels" id="graph-wrapper" class="graph-wrapper">
   <div class="label-wrapper">
     <checkboxes group="gender"></checkboxes>
     <checkboxes group="age"></checkboxes>
