@@ -129,11 +129,7 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
           .attr('width', 10)
           .attr('height', 10)
           .style('fill', function(d) { 
-            if(d.name === "you") {
-              return 'blue'
-            } else {
-              return 'red'
-            }
+            return d.name === "you" ? 'blue' : 'red'
           });
           
       legend.append('text')
@@ -142,11 +138,7 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
           })
           .attr('y', -10)
           .text(function(d){
-            if(d.name ==="you") {
-              return "You"
-            } else {
-              return "Average"
-            }
+            return d.name === "you" ? "You" : "Average"
           });
       }
 
@@ -206,9 +198,8 @@ app.directive('d3Barh', ['d3Service', function(d3Service) {
             }
           })
           .attr("y", function(d) {
-            var yVal = d.name === "you" ? y(d.activity) + 20 : y(d.activity) + y.rangeBand()/1.2
-                return yVal
-              })
+            return d.name === "you" ? y(d.activity) + 20 : y(d.activity) + y.rangeBand()/1.2
+          })
          .attr("x", function(d) {
           return x(d.hours) - 20
          })

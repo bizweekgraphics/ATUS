@@ -25,7 +25,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     var elArray = []
     $('.radio-input').each(function(index, el) {
       elementId = $(el).attr('id')
-      if(el.checked && !/All/.test(elementId) {
+      if(el.checked && !/All/.test(elementId)) {
         elArray.push(elementId.split('split')[0])
       }
     })
