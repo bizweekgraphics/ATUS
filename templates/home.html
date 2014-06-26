@@ -1,18 +1,23 @@
 <div class="wrapper">
-  <h2 id="title">How Do You Compare to the Average American?</h2>
+  <h1 id="title">How Do You Compare<br> to the Average American?</h1>
   <p id="title-p">Use the sliders to chart your day. Once all 24 hours are accounted for, click "Submit" to see how you compare</p>
   <div id="left">
-    <div ng-repeat="data in averageData.slice(0, 6)">
+<!--     <div ng-repeat="data in averageData.slice(0, 12)">
       <h4 tooltip-placement="bottom" tooltip="{{averageData[$index].nested}}">{{data.activity}}: {{activity}} hours</h4>
       <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
-    </div>
+    </div> -->
   </div>
   <div id="right">
-    <div ng-repeat="data in averageData.slice(6, 12)">
-      <h4 tooltip-placement="bottom" tooltip="{{averageData[$index + 6].nested}}">{{data.activity}}: {{activity}} hours</h4>
-      <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
+    <div ng-repeat="data in averageData.slice(0, 12)">
+      <div class="nest-left">
+        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
+      </div>
+      <div class="nest-right">
+        <p tooltip-placement="bottom" tooltip="{{averageData[$index + 6].nested}}">{{data.activity}}</p>
+      </div>
     </div>
   </div>
+
   <div class="clear"></div>
 
 <br>

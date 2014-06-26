@@ -1,30 +1,77 @@
+@font-face {
+  font-family: 'BloombergLBold';
+    src: url("http://www.businessweek.com/assets/type/bloombergl_heavy.eot?#iefix") format('embedded-opentype'),
+       url('http://www.businessweek.com/assets/type/bloombergl_heavy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+  font-family:'BWHaasHead';
+  src: url('http://www.businessweek.com/assets/type/hinted/haas/bwhaasgroteskhead-95black.eot?#iefix') format('eot'),
+     url('http://www.businessweek.com/assets/type/hinted/haas/bwhaasgroteskhead-95black.woff') format('woff'),
+     url('http://www.businessweek.com/assets/type/haas/bwhaasgroteskhead-95black.ttf') format('truetype');
+
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+@font-face {
+  font-family:'BWHaasHead75Bold';
+  src: url('http://www.businessweek.com/assets/type/hinted/haas75/bwhaasgroteskhead-75bold.eot?#iefix') format('eot'),
+     url('http://www.businessweek.com/assets/type/hinted/haas75/bwhaasgroteskhead-75bold.woff') format('woff'),
+     url('http://www.businessweek.com/assets/type/haas75/bwhaasgrotesktext-75bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+@font-face {
+  font-family:'BWHaasRegular';
+  src: url('http://www.businessweek.com/assets/web_fonts/bwhaasgroteskhead-65medium.eot?#iefix') format('eot'),
+     url('http://www.businessweek.com/assets/web_fonts/bwhaasgroteskhead-65medium.woff') format('woff'),
+     url('http://www.businessweek.com/assets/web_fonts/bwhaasgrotesktext-65medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
 .wrapper {
   width: 970px;
 }
 
 #title {
-  text-align: center;
+  font-size: 4em;
+  font-family: 'BWHaasHead',sans-serif;
 }
 
-#title-p {
-  text-align: center;
-}
 
 #left {
-  width: 485px;
+  width: 400px;
   float: left;
     }
 
 #right {
   padding-top: .05em;
-  margin-left: 485px; /* Change this to whatever the width of your left column is*/
+  float: right;
+  width: 570px;
+}
+
+.nest-left {
+  float:left;
+  margin-top: 9px;
+  width: 250px;
+}
+
+.nest-right {
+  float:left;
+  width: 320px;
+  margin-bottom: 1em;
 }
 
 .slider {
   /*margin: 2em;*/
-  margin-bottom: 2em;
-  margin-left: 2em;
-  width: 90%;
+  /*margin-bottom: 2em;*/
+  /*margin-left: 2em;*/
+  width: 100%;
 }
 
 .clear {
@@ -32,7 +79,7 @@
 }
 
 .button-wrapper {
-  text-align: center;
+  text-align: right;
 }
 
 .show-button {
@@ -40,17 +87,10 @@
   margin: 0 auto;
 }
 
-.submit-button {
-  display: block;
-  margin: 0 auto;
-  color: green;
-}
 
-.total {
-  text-align: center;
-}
-
-h4 {
+.nest-right p{
+  color: blue;
+  font-size: 1em;
   margin-left: 1em;
   font-family: sans-serif;
 }
