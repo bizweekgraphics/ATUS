@@ -1,19 +1,30 @@
 <div class="wrapper">
   <h1 id="title">How Do You Compare<br> to the Average American?</h1>
   <p id="title-p">Use the sliders to chart your day. Once all 24 hours are accounted for, click "Submit" to see how you compare</p>
-  <div id="left">
-<!--     <div ng-repeat="data in averageData.slice(0, 12)">
-      <h4 tooltip-placement="bottom" tooltip="{{averageData[$index].nested}}">{{data.activity}}: {{activity}} hours</h4>
-      <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
-    </div> -->
-  </div>
-  <div id="right">
-    <div ng-repeat="data in averageData.slice(0, 12)">
-      <div class="nest-left">
+
+  <div class="slide-wrapper">
+    <div class="inline-block quarter">
+      <div class="slide-container" ng-repeat="data in averageData.slice(0, 3)">
+        <p tooltip-placement="bottom" tooltip="{{averageData[$index].nested}}">{{data.activity}}</p>
         <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
       </div>
-      <div class="nest-right">
+    </div>
+    <div class="inline-block quarter">
+      <div class="slide-container" ng-repeat="data in averageData.slice(3, 6)">
+        <p tooltip-placement="bottom" tooltip="{{averageData[$index + 3].nested}}">{{data.activity}}</p>
+        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
+      </div>
+    </div>
+    <div class="inline-block quarter">
+      <div class="slide-container" ng-repeat="data in averageData.slice(6, 9)">
         <p tooltip-placement="bottom" tooltip="{{averageData[$index + 6].nested}}">{{data.activity}}</p>
+        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
+      </div>
+    </div>
+    <div class="inline-block quarter">
+      <div class="slide-container" ng-repeat="data in averageData.slice(9, 12)">
+        <p tooltip-placement="bottom" tooltip="{{averageData[$index + 9].nested}}">{{data.activity}}</p>
+        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
       </div>
     </div>
   </div>

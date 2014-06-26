@@ -10,13 +10,16 @@ app.directive('slider', function() {
                   connect: 'lower',
                   range: {
                     'min': 0,
-                    'max': 12
+                    'max': 12.5
                   }
                 }).on('slide', function() {
                   scope.$apply(function() {
                     var value = $(elem).val()
                     ngModel.$setViewValue(value);
                     scope.setData(elem.attr('counter'), $(elem).val())
+                    if($(elem).val() >= 12) {
+                      $(elem).val(12)
+                    } 
                   })
                 })
 

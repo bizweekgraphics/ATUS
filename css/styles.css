@@ -43,28 +43,27 @@
   font-family: 'BWHaasHead',sans-serif;
 }
 
-
-#left {
-  width: 400px;
-  float: left;
-    }
-
-#right {
-  padding-top: .05em;
-  float: right;
-  width: 570px;
+.slide-wrapper {
+  width: 970px;
 }
 
-.nest-left {
-  float:left;
-  margin-top: 9px;
-  width: 250px;
+.slide-container {
+  margin-bottom: 2em;
 }
 
-.nest-right {
-  float:left;
-  width: 320px;
-  margin-bottom: 1em;
+.slide-container p {
+  margin-bottom: 1.5em;
+  height: 40px;
+}
+
+
+.inline-block {
+  display: inline-block;
+}
+
+.quarter {
+  width: 21%;
+  margin: 1em;
 }
 
 .slider {
@@ -92,14 +91,6 @@
 .pure-button-primary {
   font-size: 1.5em;
   background: blue;
-}
-
-
-.nest-right p{
-  color: blue;
-  font-size: 1em;
-  margin-left: 1em;
-  font-family: sans-serif;
 }
 
 .graph-wrapper {
