@@ -14,12 +14,16 @@ app.directive('slider', function() {
                   }
                 }).on('slide', function() {
                   scope.$apply(function() {
-                    var value = $(elem).val()
+                    if($(elem).val() >=12) {
+                      var value = 12.00
+                      $(elem).val(12.00)
+                    } else {
+                      var value = $(elem).val()
+                    }
+                    var right = value <= 1.5 ? (value/12) * -100 + 9 : (value/12) * -100 + 14
+                    $(elem).prev().css('right', right + '%')
                     ngModel.$setViewValue(value);
                     scope.setData(elem.attr('counter'), $(elem).val())
-                    if($(elem).val() >= 12) {
-                      $(elem).val(12)
-                    } 
                   })
                 })
 

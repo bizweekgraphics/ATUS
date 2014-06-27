@@ -6,24 +6,28 @@
     <div class="inline-block quarter">
       <div class="slide-container" ng-repeat="data in averageData.slice(0, 3)">
         <p tooltip-placement="bottom" tooltip="{{averageData[$index].nested}}">{{data.activity}}</p>
+        <span class="hours">{{activity | number:2}}</span>
         <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
       </div>
     </div>
     <div class="inline-block quarter">
       <div class="slide-container" ng-repeat="data in averageData.slice(3, 6)">
         <p tooltip-placement="bottom" tooltip="{{averageData[$index + 3].nested}}">{{data.activity}}</p>
+        <span class="hours">{{activity | number:2}}</span>
         <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
       </div>
     </div>
     <div class="inline-block quarter">
       <div class="slide-container" ng-repeat="data in averageData.slice(6, 9)">
         <p tooltip-placement="bottom" tooltip="{{averageData[$index + 6].nested}}">{{data.activity}}</p>
+        <span class="hours">{{activity | number:2}}</span>
         <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
       </div>
     </div>
     <div class="inline-block quarter">
       <div class="slide-container" ng-repeat="data in averageData.slice(9, 12)">
         <p tooltip-placement="bottom" tooltip="{{averageData[$index + 9].nested}}">{{data.activity}}</p>
+        <span class="hours">{{activity | number:2}}</span>
         <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
       </div>
     </div>

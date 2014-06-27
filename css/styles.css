@@ -56,6 +56,13 @@
   height: 40px;
 }
 
+.hours {
+  font-family: 'BWHaasRegular';
+  position: relative;
+  right: 9%;
+  top: 29px;
+  z-index: 100;
+}
 
 .inline-block {
   display: inline-block;
