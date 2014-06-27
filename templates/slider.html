@@ -1,0 +1,10 @@
+<div class="inline-block quarter">
+  <div class="slide-container" ng-repeat="datum in data">
+    <p tooltip-placement="bottom" tooltip="{{data[$index].nested}}">{{datum.activity}}</p>
+    <span class="hours">{{activity | number:2}}</span>
+    <div slider class="slider" counter="{{datum.counter}}" ng-model="activity"></div>
+    <span class="average-hours">{{activity | number:2}}</span>
+    <div slider class="average-slider" ng-model="activity"></div>
+
+  </div>
+</div>

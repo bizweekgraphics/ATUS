@@ -1,42 +1,19 @@
 <div class="wrapper">
   <h1 id="title">How Do You Compare<br> to the Average American?</h1>
-  <p id="title-p">Use the sliders to chart your day. Once all 24 hours are accounted for, click "Submit" to see how you compare</p>
+<!--   <p id="title-p">Use the sliders to chart your day. Once all 24 hours are accounted for, click "Submit" to see how you compare</p> -->
 
   <div class="slide-wrapper">
-    <div class="inline-block quarter">
-      <div class="slide-container" ng-repeat="data in averageData.slice(0, 3)">
-        <p tooltip-placement="bottom" tooltip="{{averageData[$index].nested}}">{{data.activity}}</p>
-        <span class="hours">{{activity | number:2}}</span>
-        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
-      </div>
-    </div>
-    <div class="inline-block quarter">
-      <div class="slide-container" ng-repeat="data in averageData.slice(3, 6)">
-        <p tooltip-placement="bottom" tooltip="{{averageData[$index + 3].nested}}">{{data.activity}}</p>
-        <span class="hours">{{activity | number:2}}</span>
-        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
-      </div>
-    </div>
-    <div class="inline-block quarter">
-      <div class="slide-container" ng-repeat="data in averageData.slice(6, 9)">
-        <p tooltip-placement="bottom" tooltip="{{averageData[$index + 6].nested}}">{{data.activity}}</p>
-        <span class="hours">{{activity | number:2}}</span>
-        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
-      </div>
-    </div>
-    <div class="inline-block quarter">
-      <div class="slide-container" ng-repeat="data in averageData.slice(9, 12)">
-        <p tooltip-placement="bottom" tooltip="{{averageData[$index + 9].nested}}">{{data.activity}}</p>
-        <span class="hours">{{activity | number:2}}</span>
-        <div slider class="slider" counter="{{data.counter}}" ng-model="activity"></div>
-      </div>
-    </div>
+    <slider data="one" activity="activity"></slider>
+    <slider data="two" activity="activity"></slider>
+    <slider data="three" activity="activity"></slider>
+    <slider data="four" activity="activity"></slider>
   </div>
 
-  <div class="clear"></div>
 
 <br>
 <div class="button-wrapper">
+
+<button ng-click="test()">Test</button>
 
 <a href="" smooth-scroll target="graph-wrapper"><button class="btn btn-default" ng-class="{'pure-button-primary': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit <span ng-show="checkHours()">({{hoursRemaining}} hours <span ng-show="more">more</span> <span ng-hide="more">less</span> to enable)</span></button></a>
 
@@ -51,8 +28,9 @@
     <checkboxes group="education"></checkboxes>
     <checkboxes group="day"></checkboxes>
   </div>
-  <div d3-barh data="testData" show="displayGraph"></div>
 </div>
+
+<select ng-options="item.label for item in gender"></select>
 
 </div>
 

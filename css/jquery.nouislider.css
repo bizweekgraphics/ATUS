@@ -198,10 +198,30 @@ border-radius: 20px !important;
 
 /* Disabled state;
  */
-[disabled].noUi-connect,
+/*[disabled].noUi-connect,
 [disabled] .noUi-connect {
   background: #B8B8B8;
 }
 [disabled] .noUi-handle {
   cursor: not-allowed;
+}*/
+
+.average-slider {
+  border-radius: 20px !important;
+}
+
+.average-slider .noUi-handle {
+  -webkit-border-radius: 50%;
+  -mox-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: black;
+  cursor: default;
+}
+
+.average-slider {
+  background: black;
+  /*box-shadow: inset 0 0 3px rgba(51,51,51,0.45);*/
+-webkit-transition: background 450ms;
+  transition: background 450ms;
 }

@@ -64,6 +64,15 @@
   z-index: 100;
 }
 
+.average-hours {
+  color: #0f0;
+  font-family: 'BWHaasRegular';
+  position: relative;
+  right: 9%;
+  top: 29px;
+  z-index: 100;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -74,9 +83,6 @@
 }
 
 .slider {
-  /*margin: 2em;*/
-  /*margin-bottom: 2em;*/
-  /*margin-left: 2em;*/
   width: 100%;
 }
 
@@ -143,3 +149,19 @@
   display: none;
 }
 
+
+select {
+  /*position: absolute;*/
+  /*left: 400px;*/
+  background: black;
+  color: #0f0 !important;
+  /*border-radius: 20%;*/
+  width: 10em;
+  height: 3em;
+  margin-left: 10em;
+}
+
+option {
+  background: black !important;
+  color: #0f0;
+}

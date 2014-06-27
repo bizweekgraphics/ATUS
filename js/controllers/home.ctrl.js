@@ -43,10 +43,12 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     return $scope.totalHours != 24
   }
 
+
   $scope.more = true
 
   $scope.displayGraph = false
-  $scope.labels = true
+  // $scope.labels = true
+  $scope.labels = false
 
   $scope.showGraph = function() {
     $('#Allsplitgender').attr('checked', true)
@@ -90,6 +92,15 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     $scope.testData = $scope.averageData.concat($scope.personalData)
   }
 
+  $scope.test = function() {
+    $('.average-slider').each(function(index, item) {
+    var value = parseFloat($scope.averageData[index].hours)
+    $(item).val(value, {set: true})
+    $($('.average-hours')[index]).text(value)
+    $(item).attr('disabled', true)
+    })
+  }
+
   $scope.filterGraph = function(group) {
     group = group.trim()
     $http.get('data/updateddata.json')
@@ -103,6 +114,11 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
         $scope.averageData.push({name: "ATUS", activity: obj.activity, hours: obj[group], counter: counterVal, nested: obj.nested})
         $scope.personalData.push({name: "you", activity: obj.activity, hours: 0, counter: counterVal})
       })
+      $scope.one = $scope.personalData.slice(0, 3)
+      $scope.two = $scope.personalData.slice(3,6)
+      $scope.three = $scope.personalData.slice(6, 9)
+      $scope.four = $scope.personalData.slice(9, 12)
+
       init()
     })
   }
@@ -125,6 +141,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
       return item.group === group
     })
   }
+
 
 }])
 
