@@ -92,7 +92,9 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     $scope.testData = $scope.averageData.concat($scope.personalData)
   }
 
-  $scope.test = function() {
+  $scope.showAverage = function() {
+    console.log('test')
+    $scope.hideAverage = false
     $('.average-slider').each(function(index, item) {
     var value = parseFloat($scope.averageData[index].hours)
     $(item).val(value, {set: true})
@@ -142,10 +144,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     })
   }
 
-  $scope.updateImg = function(event) {
-    console.log('test')
-    debugger;
-  }
+  $scope.hideAverage = true
 
 
 }])

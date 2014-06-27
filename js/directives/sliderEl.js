@@ -4,7 +4,7 @@ app.directive('slider', [function() {
     scope: {
       data: '=data',
       activity: '=activity',
-      updateImg: '&'
+      hideAverage: '=hide'
     },
     templateUrl: 'templates/slider.html',
     link: function(scope, element, attrs) {
