@@ -1,9 +1,14 @@
 <div class="wrapper">
   <h1 id="title">How Do You Compare<br> to the Average American?</h1>
-<!--   <p id="title-p">Use the sliders to chart your day. Once all 24 hours are accounted for, click "Submit" to see how you compare</p> -->
+  <p id="title-p">Use the sliders to chart your day. Once all 24 hours are accounted for, click "Submit" to see how you compare</p>
+
+  <div class="clockman">
+    <span id="clockman-time">24:00</span>
+    <img id="clockman-img" src="img/main.png"></img>
+  </div>
 
   <div class="slide-wrapper">
-    <slider data="one" activity="activity"></slider>
+    <slider updateImg="updateImg()" data="one" activity="activity"></slider>
     <slider data="two" activity="activity"></slider>
     <slider data="three" activity="activity"></slider>
     <slider data="four" activity="activity"></slider>
@@ -31,6 +36,8 @@
 </div>
 
 <select ng-options="item.label for item in gender"></select>
+
+<button ng-click="alert('test')">Test</button>
 
 </div>
 

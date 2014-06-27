@@ -111,8 +111,8 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
       angular.forEach(res.data, function(obj) {
         var counterVal = "set" + counter
         counter += 1
-        $scope.averageData.push({name: "ATUS", activity: obj.activity, hours: obj[group], counter: counterVal, nested: obj.nested})
-        $scope.personalData.push({name: "you", activity: obj.activity, hours: 0, counter: counterVal})
+        $scope.averageData.push({name: "ATUS", nested: obj.nested, activity: obj.activity, hours: obj[group], counter: counterVal, nested: obj.nested})
+        $scope.personalData.push({name: "you", nested: obj.nested, activity: obj.activity, hours: 0, counter: counterVal})
       })
       $scope.one = $scope.personalData.slice(0, 3)
       $scope.two = $scope.personalData.slice(3,6)
@@ -140,6 +140,11 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     return data.filter(function(item) {
       return item.group === group
     })
+  }
+
+  $scope.updateImg = function(event) {
+    console.log('test')
+    debugger;
   }
 
 
