@@ -108,14 +108,36 @@
   clear: both;
 }
 
+.enable-time {
+  color: #0f0;
+  font-family: 'BWHaasRegular';
+  font-size: 3em;
+}
+
 .button-wrapper {
   text-align: right;
+}
+
+.submit-btn {
+  margin-left: 2em;
+  width: 200px;
+  height: 75px;
+  border-radius: 20px;
+  font-family: 'BWHaasRegular';
+  font-size: 3em;
+  background: black;
+  color: grey;
+  border: 1px solid #0f0;
+}
+
+.active-submit {
+  color: #0f0;
 }
 
 .pure-button {
   font-family: 'BWHaasRegular';
   height: 6em;
-  width: 17em;
+  width: 15em;
   border-radius: 8px;
 }
 

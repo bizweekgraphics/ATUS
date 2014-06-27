@@ -1,7 +1,4 @@
 <div class="wrapper">
-  <h1 id="title">How Do You Compare<br> to the Average American?</h1>
-  <p id="title-p">Use the sliders to chart your day. Once all 24 hours are accounted for, click "Submit" to see how you compare</p>
-
   <div class="clockman">
     <span id="clockman-time">{{totalHours | parseHours}}</span>
     <img id="clockman-img" src="img/main.png"></img>
@@ -18,9 +15,13 @@
 <br>
 <div class="button-wrapper">
 
-<button ng-click="showAverage()">Test</button>
+<!-- <button ng-click="showAverage()">Test</button> -->
 
-<a href="" smooth-scroll target="graph-wrapper"><button class="btn btn-default" ng-class="{'pure-button-primary': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit <span ng-show="checkHours()">({{hoursRemaining}} hours <span ng-show="more">more</span> <span ng-hide="more">less</span> to enable)</span></button></a>
+<span class="enable-time" ng-show="checkHours()">{{hoursRemaining}} Hours <span ng-show="more">More</span> <span ng-hide="more">Less</span> To Enable</span><a href="" smooth-scroll target="graph-wrapper"><button class="submit-btn" ng-class="{'active-submit': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit </button></a>
+
+<br>
+
+
 
 <br>
 </div>

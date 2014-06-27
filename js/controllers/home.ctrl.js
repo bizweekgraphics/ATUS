@@ -47,8 +47,8 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.more = true
 
   $scope.displayGraph = false
-  // $scope.labels = true
-  $scope.labels = false
+  $scope.labels = true
+  // $scope.labels = false
 
   $scope.showGraph = function() {
     $('#Allsplitgender').attr('checked', true)
