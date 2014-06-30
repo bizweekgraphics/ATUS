@@ -1,5 +1,11 @@
-<h4>{{group[0].group|capitalize}}</h4>
-<select ng-model="All">
+<!-- <h4>{{group[0].group|capitalize}}</h4>
+{{group}}
+<select ng-model="group[0]">
   <option ng-repeat="item in group"  id="{{item.label + 'split' + item.group}}" class="{{item.group}} option-input" value="{{item.group}}" show-check>{{item.label}}
   </option>
+</select> -->
+
+
+<p>{{group[0].group|capitalize}}</p>
+<select ng-options="item.label for item in group" ng-model="first">
 </select>

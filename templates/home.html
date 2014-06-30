@@ -8,14 +8,13 @@
     <slider data="one" hide="hideAverage" activity="activity"></slider>
     <slider data="two" hide="hideAverage" activity="activity"></slider>
     <slider data="three" hide="hideAverage" activity="activity"></slider>
-    <slider data="four" hide ="hideAverage" activity="activity"></slider>
+    <slider data="four" hide="hideAverage" activity="activity"></slider>
   </div>
 
 
 <br>
 <div class="button-wrapper">
 
-<!-- <button ng-click="showAverage()">Test</button> -->
 
 <span class="enable-time" ng-show="labels">{{hoursRemaining}} Hours <span ng-show="more">More</span> <span ng-hide="more">Less</span> To Enable</span><a href="" smooth-scroll target="graph-wrapper"><button class="submit-btn" ng-class="{'active-submit': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit </button></a>
 
@@ -27,11 +26,11 @@
 </div>
 
 <div class="select-wrapper">
-  <checkboxes group="gender"></checkboxes>
-  <checkboxes group="age"></checkboxes>
-  <checkboxes group="race"></checkboxes>
-  <checkboxes group="education"></checkboxes>
-  <checkboxes group="day"></checkboxes>
+  <checkboxes first="firstGender" group="gender"></checkboxes>
+  <checkboxes first="firstAge" group="age"></checkboxes>
+  <checkboxes first="firstRace" group="race"></checkboxes>
+  <checkboxes first="firstEducation" group="education"></checkboxes>
+  <checkboxes first="firstDay" group="day"></checkboxes>
 </div>
 
 

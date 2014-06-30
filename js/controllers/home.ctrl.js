@@ -14,6 +14,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.set10 = 0
   $scope.set11 = 0
 
+
   function init() {
     $scope.setData()
   }
@@ -136,6 +137,12 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
       $scope.age = filterGroup(data, 'age')
       $scope.race = filterGroup(data, 'race')
       $scope.education = filterGroup(data, 'education')
+      $scope.firstGender = $scope.gender[0]
+      $scope.firstDay = $scope.day[0]
+      $scope.firstAge = $scope.age[0]
+      $scope.firstRace = $scope.race[0]
+      $scope.firstEducation = $scope.education[0]
+
     })
 
   var filterGroup = function(data, group) {
