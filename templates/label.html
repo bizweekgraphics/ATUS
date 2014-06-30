@@ -7,5 +7,5 @@
 
 
 <p>{{group[0].group|capitalize}}</p>
-<select ng-options="item.label for item in group" ng-model="first">
+<select class="{{group[0].group}}" ng-options="item.label for item in group" ng-model="first" show-check>
 </select>
