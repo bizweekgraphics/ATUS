@@ -72,8 +72,8 @@
   margin-bottom: .5em;
   background: black;
   border: 1px solid #0f0;
-  border-radius: 20px;
-  height: 150px;
+  border-radius: 10px;
+  padding-bottom: 10px;
 }
 
 .slide-container p {
@@ -130,10 +130,11 @@
 }
 
 .submit-btn {
+  margin-right: 22px;
   margin-left: 2em;
-  width: 200px;
-  height: 75px;
-  border-radius: 20px;
+  width: 226px;
+  height: 86px;
+  border-radius: 10px;
   font-family: 'BWHaasRegular';
   font-size: 3em;
   background: black;
@@ -162,7 +163,7 @@
   margin: 0 auto;
 }
 
-.select-wrapper select{
+.select-wrapper checkboxes{
   width: 180px;
   padding: 0px 10px 0px 10px;
   margin-right: 10px;

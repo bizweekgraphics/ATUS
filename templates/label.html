@@ -1,6 +1,5 @@
-<div>
-  <h4>{{group[0].group|capitalize}}</h4>
-  <label ng-repeat="item in group" class="radio">
-    <input type="radio" id="{{item.label + 'split' + item.group}}" class="{{item.group}} radio-input" name="{{item.group}}" show-check> {{item.label}}
-  </label>
-</div>
+<h4>{{group[0].group|capitalize}}</h4>
+<select ng-model="All">
+  <option ng-repeat="item in group"  id="{{item.label + 'split' + item.group}}" class="{{item.group}} option-input" value="{{item.group}}" show-check>{{item.label}}
+  </option>
+</select>
