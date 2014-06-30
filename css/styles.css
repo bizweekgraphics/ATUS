@@ -59,20 +59,30 @@
   font-family: 'digitaldismay';
   font-size: 10em;
   color: #0f0;
+  text-align: center;
 }
 
 .slide-wrapper {
   width: 970px;
+  margin-top: 5px;
+  padding-left: 22px;
 }
 
 .slide-container {
-  margin-bottom: 2em;
+  margin-bottom: .5em;
+  background: black;
+  border: 1px solid #0f0;
+  border-radius: 20px;
+  height: 150px;
 }
 
 .slide-container p {
-  margin-bottom: 1.5em;
-  height: 40px;
+  color: white;
+  margin: .5em;
+  text-align: center;
+  height: 10px;
 }
+
 
 .hours {
   font-family: 'BWHaasRegular';
@@ -96,12 +106,13 @@
 }
 
 .quarter {
-  width: 21%;
-  margin: 1em;
+  width: 24%;
+  margin: 0px;
 }
 
 .slider {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .clear {
@@ -146,16 +157,12 @@
   background: blue;
 }
 
-.graph-wrapper {
-  width: 970px;
-}
-
-.label-wrapper {
+.select-wrapper {
   display: table;
   margin: 0 auto;
 }
 
-.label-wrapper checkboxes {
+.select-wrapper select{
   width: 180px;
   padding: 0px 10px 0px 10px;
   margin-right: 10px;

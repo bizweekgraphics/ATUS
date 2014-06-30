@@ -17,7 +17,7 @@
 
 <!-- <button ng-click="showAverage()">Test</button> -->
 
-<span class="enable-time" ng-show="checkHours()">{{hoursRemaining}} Hours <span ng-show="more">More</span> <span ng-hide="more">Less</span> To Enable</span><a href="" smooth-scroll target="graph-wrapper"><button class="submit-btn" ng-class="{'active-submit': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit </button></a>
+<span class="enable-time" ng-show="labels">{{hoursRemaining}} Hours <span ng-show="more">More</span> <span ng-hide="more">Less</span> To Enable</span><a href="" smooth-scroll target="graph-wrapper"><button class="submit-btn" ng-class="{'active-submit': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit </button></a>
 
 <br>
 
@@ -25,7 +25,7 @@
 
 <br>
 </div>
-
+<!-- 
 <div ng-hide="labels" id="graph-wrapper" class="graph-wrapper">
   <div class="label-wrapper">
     <checkboxes group="gender"></checkboxes>
@@ -34,9 +34,15 @@
     <checkboxes group="education"></checkboxes>
     <checkboxes group="day"></checkboxes>
   </div>
-</div>
+</div> -->
 
-<select ng-options="item.label for item in gender"></select>
+<div class="select-wrapper">
+  <select ng-model="label" ng-options="item.label for item in gender"></select>
+  <select ng-model="label" ng-options="item.label for item in day"></select>
+  <select ng-model="label" ng-options="item.label for item in age"></select>
+  <select ng-model="label" ng-options="item.label for item in race"></select>
+  <select ng-model="label" ng-options="item.label for item in education"></select>
+</div>
 
 
 </div>
