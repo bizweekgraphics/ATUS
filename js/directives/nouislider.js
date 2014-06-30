@@ -20,7 +20,7 @@ app.directive('slider', function() {
                     } else {
                       var value = $(elem).val()
                     }
-                    var right = value <= 1.5 ? (value/12) * -100 + 9 : (value/12) * -100 + 14
+                    var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
                     $(elem).prev().css('right', right + '%')
                     ngModel.$setViewValue(value);
                     scope.$parent.$parent.setData(elem.attr('counter'), $(elem).val())
@@ -32,7 +32,7 @@ app.directive('slider', function() {
                   } else {
                     var value = $(elem).val()
                   }
-                  var right = value <= 1.5 ? (value/12) * -100 + 9 : (value/12) * -100 + 14
+                    var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
                   $(elem).prev().css('right', right + '%')
                 })
 

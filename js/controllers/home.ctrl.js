@@ -24,10 +24,10 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.updateGraph = function() {
 
     var elArray = []
-    $('.radio-input').each(function(index, el) {
-      elementId = $(el).attr('id')
-      if(el.checked && !/All/.test(elementId)) {
-        elArray.push(elementId.split('split')[0])
+    $('option').each(function(index, el) {
+      elementId = $(el).text()
+      if(el.selected && !/All/.test(elementId)) {
+        elArray.push(elementId)
       }
     })
 
@@ -52,13 +52,10 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   // $scope.labels = false
 
   $scope.showGraph = function() {
-    $('#Allsplitgender').attr('checked', true)
-    $('#Allsplitage').attr('checked', true)
-    $('#Allsplitrace').attr('checked', true)
-    $('#Allspliteducation').attr('checked', true)
-    $('#Allsplitday').attr('checked', true)
+    $('.average-slider').attr('disabled', true)
     $scope.displayGraph = true
     $scope.labels = false
+    $scope.hideAverage = false
   }
 
   $scope.setData = function(elemCounter, value) {
@@ -90,19 +87,27 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     }
 
 
-    $scope.testData = $scope.averageData.concat($scope.personalData)
   }
 
+  setInterval(function() {
+    $scope.showAverage()
+  }, 0)
+
   $scope.showAverage = function() {
-    console.log('test')
-    $scope.hideAverage = false
     $('.average-slider').each(function(index, item) {
-    var value = parseFloat($scope.averageData[index].hours)
-    $(item).val(value, {set: true})
-    $($('.average-hours')[index]).text(value)
-    $(item).attr('disabled', true)
+      var value = parseFloat($scope.averageData[index].hours)
+      $(item).val(value)
+      var hoursText = $($('.average-hours')[index])
+      hoursText.text(value)
+      var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
+      hoursText.css('right', right + '%')
     })
+
   }
+
+  $scope.$watch('averageData', function(newValue, oldValue) {
+    $scope.showAverage()
+  })
 
   $scope.filterGraph = function(group) {
     group = group.trim()

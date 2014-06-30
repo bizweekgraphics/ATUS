@@ -4,9 +4,9 @@
     <div ng-mouseenter= "updateImg($event, datum)"  class="slide-box">
       <span class="hours">{{activity | number:2}}</span>
       <div slider class="slider" counter="{{datum.counter}}" ng-model="activity"></div>
-      <div ng-hide="{{hideAverage}}">
+      <div ng-hide="hideAverage">
         <span class="average-hours">{{activity | number:2}}</span>
-        <div slider class="average-slider" ng-model="activity"></div>
+        <div slider class="average-slider" ng-model="averageActivity"></div>
       </div>
     </div>
 

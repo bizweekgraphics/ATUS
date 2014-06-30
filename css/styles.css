@@ -65,8 +65,7 @@
 .slide-wrapper {
   width: 970px;
   margin-top: 5px;
-  padding-left: 22px;
-}
+f}
 
 .slide-container {
   margin-bottom: .5em;
@@ -87,16 +86,16 @@
 .hours {
   font-family: 'BWHaasRegular';
   position: relative;
-  right: 9%;
+  right: -2%;
   top: 29px;
   z-index: 100;
 }
 
 .average-hours {
-  color: #0f0;
+  color: black;
   font-family: 'BWHaasRegular';
   position: relative;
-  right: 9%;
+  right: -2%;
   top: 29px;
   z-index: 100;
 }
@@ -106,7 +105,7 @@
 }
 
 .quarter {
-  width: 24%;
+  width: 24.69%;
   margin: 0px;
 }
 
@@ -114,6 +113,12 @@
   width: 80%;
   margin: 0 auto;
 }
+
+.average-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
 
 .clear {
   clear: both;
@@ -130,9 +135,9 @@
 }
 
 .submit-btn {
-  margin-right: 22px;
   margin-left: 2em;
-  width: 226px;
+  margin-right: -4px;
+  width: 239px;
   height: 86px;
   border-radius: 10px;
   font-family: 'BWHaasRegular';

@@ -130,6 +130,7 @@ border-radius: 20px !important;
 -webkit-transition: background 450ms;
   transition: background 450ms;
 }
+
 .noUi-origin {
   border-radius: 2px;
 }
@@ -202,10 +203,8 @@ border-radius: 20px !important;
 /*[disabled].noUi-connect,
 [disabled] .noUi-connect {
   background: #B8B8B8;
-}
-[disabled] .noUi-handle {
-  cursor: not-allowed;
 }*/
+
 
 .average-slider {
   border-radius: 20px !important;
@@ -215,14 +214,16 @@ border-radius: 20px !important;
   -webkit-border-radius: 50%;
   -mox-border-radius: 50%;
   border-radius: 50%;
-  border: 1px solid black;
-  background: black;
+  border: 1px solid white;
+  background: white;
   cursor: default;
 }
 
 .average-slider {
-  background: black;
+  background: white;
   /*box-shadow: inset 0 0 3px rgba(51,51,51,0.45);*/
 -webkit-transition: background 450ms;
   transition: background 450ms;
 }
+
+
