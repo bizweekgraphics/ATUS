@@ -73,6 +73,7 @@ f}
   border: 1px solid #0f0;
   border-radius: 10px;
   padding-bottom: 10px;
+  min-height: 90px;
 }
 
 .slide-container p {
@@ -112,6 +113,7 @@ f}
 .slider {
   width: 80%;
   margin: 0 auto;
+  margin-bottom: -17px;
 }
 
 .average-slider {

@@ -13,7 +13,7 @@
 
 
 <br>
-<div class="button-wrapper">
+<div class="button-wrapper" ng-show="labels">
 
 
 <span class="enable-time" ng-show="labels">{{hoursRemaining}} Hours <span ng-show="more">More</span> <span ng-hide="more">Less</span> To Enable</span><a href="" smooth-scroll target="graph-wrapper"><button class="submit-btn" ng-class="{'active-submit': !checkHours()}" ng-disabled="checkHours()" ng-show="labels" ng-click="showGraph()">Submit </button></a>

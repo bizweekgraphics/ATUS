@@ -89,8 +89,10 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   }
 
+
   setInterval(function() {
     $scope.showAverage()
+    $scope.showPersonal()
   }, 0)
 
   $scope.showAverage = function() {
@@ -105,6 +107,17 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   }
 
+  $scope.showPersonal = function() {
+    $('.slider').each(function(index, item) {
+    var value = parseFloat($scope.personalData[index].hours)
+    $(item).val(value)
+    var hoursText = $($('.hours')[index])
+    hoursText.text(value)
+    var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
+    hoursText.css('right', right + '%')
+    })
+  }
+
   $scope.$watch('averageData', function(newValue, oldValue) {
     $scope.showAverage()
   })
@@ -114,13 +127,17 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     $http.get('data/updateddata.json')
     .then(function(res) {
       $scope.averageData = []
-      $scope.personalData = []
+      if(!$scope.personalData) {
+        $scope.personalData = []
+      }
       counter = 0
       angular.forEach(res.data, function(obj) {
         var counterVal = "set" + counter
         counter += 1
         $scope.averageData.push({name: "ATUS", nested: obj.nested, activity: obj.activity, hours: obj[group], counter: counterVal, nested: obj.nested})
-        $scope.personalData.push({name: "you", nested: obj.nested, activity: obj.activity, hours: 0, counter: counterVal})
+        if($scope.personalData.length < 12) {
+          $scope.personalData.push({name: "you", nested: obj.nested, activity: obj.activity, hours: 0, counter: counterVal})
+        }
       })
       $scope.one = $scope.personalData.slice(0, 3)
       $scope.two = $scope.personalData.slice(3,6)
