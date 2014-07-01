@@ -24,6 +24,7 @@ app.directive('slider', function() {
                     $(elem).prev().css('right', right + '%')
                     ngModel.$setViewValue(value);
                     scope.$parent.$parent.setData(elem.attr('counter'), $(elem).val())
+                    $(elem).parent().children('.handle').css('left', -right + '%')
                   })
                 })
                 .on('set', function() {
@@ -38,6 +39,8 @@ app.directive('slider', function() {
                   ngModel.$setViewValue(value);
                   console.log($(elem).val())
                   scope.$parent.$parent.setData(elem.attr('counter'), $(elem).val())
+                  $(elem).parent().children('.handle').css('left', -right + '%')
+
                 })
 
                 ngModel.$render = function() {

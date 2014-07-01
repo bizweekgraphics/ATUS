@@ -3,6 +3,7 @@
     <div ng-mouseenter= "updateImg($event, datum)">
     <p tooltip-placement="bottom" tooltip="{{data[$index].nested}}">{{datum.activity}}</p>
     <div class="slide-box">
+      <div class="handle"></div>
       <span class="hours">{{activity | number:2}}</span>
       <div slider class="slider" counter="{{datum.counter}}" ng-model="activity"></div>
       <div ng-hide="hideAverage">

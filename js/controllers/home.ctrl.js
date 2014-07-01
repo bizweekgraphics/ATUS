@@ -133,7 +133,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter
     var asterisks = []
     $('.average-slider').each(function(index, item) {
       var asterisk = false
-      var value = parseFloat($scope.averageData[index].hours)
+      var value = parseFloat($scope.averageData[index].hours).toFixed(2)
       if(isNaN(value)) {
         value = 0
         asterisks.push('*')
@@ -149,6 +149,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter
       }
       hoursText.text(value)
       hoursText.css('right', right + '%')
+      $($('.average-handle')[index]).css('left', -right + '%')
     })
     $scope.asterisk = asterisks.length > 0
   }
