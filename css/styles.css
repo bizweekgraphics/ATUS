@@ -215,7 +215,7 @@
 .select-wrapper checkboxes{
   width: 300px;
   /*padding-right: 30px;*/
-  padding: 0px 20px 0px 20px;
+  padding: 0px .1em 0px .1em;
   float: none;
   display: table-cell; 
   vertical-align: top;
@@ -279,9 +279,9 @@ select {
   color: white !important;
   border: 1px solid #0f0;
   /*border-radius: 20%;*/
-  width: 10em;
+  width: 12.13em;
   height: 3em;
-  margin-left: 10em;
+  /*margin-left: .5em;*/
 }
 
 option {
@@ -298,4 +298,14 @@ option {
 }
 @-webkit-keyframes blink {
   to { visibility: hidden; }
+}
+
+
+
+.data-credit {
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 10px;
+  font-family: Helvetica;
+  margin-top: 50px;
 }
