@@ -85,18 +85,18 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     $scope[elemCounter] = parseFloat(value)
 
     $scope.personalData = [
-      {"name":"you","activity":"Personal care activities","hours": $scope.set0,"counter":"set0"},
-      {"name":"you","activity":"Eating and drinking","hours": $scope.set1,"counter":"set1"},
-      {"name":"you","activity":"Household activities","hours": $scope.set2,"counter":"set2"},
-      {"name":"you","activity":"Purchasing goods and services","hours": $scope.set3,"counter":"set3"},
-      {"name":"you","activity":"Caring for/helping household members","hours": $scope.set4,"counter":"set4"},
-      {"name":"you","activity":"Caring for/helping non-household members","hours": $scope.set5,"counter":"set5"},
-      {"name":"you","activity":"Working and work-related activities","hours": $scope.set6,"counter":"set6"},
-      {"name":"you","activity":"Educational activities","hours": $scope.set7,"counter":"set7"},
-      {"name":"you","activity":"Organizational civic and religious activities","hours": $scope.set8,"counter":"set8"},
-      {"name":"you","activity":"Leisure and sports","hours": $scope.set9,"counter":"set9"},
-      {"name":"you","activity":"Telephone calls, mail, and email","hours": $scope.set10,"counter":"set1 $scope.set0"},
-      {"name":"you","activity":"Other activities not elsewhere classified","hours": $scope.set11,"counter":"set11"}
+      {"name":"you","activity":"Sleeping and Grooming","hours": $scope.set0,"counter":"set0"},
+      {"name":"you","activity":"Eating and Drinking","hours": $scope.set1,"counter":"set1"},
+      {"name":"you","activity":"Housekeeping","hours": $scope.set2,"counter":"set2"},
+      {"name":"you","activity":"Shopping","hours": $scope.set3,"counter":"set3"},
+      {"name":"you","activity":"Child and Family Care","hours": $scope.set4,"counter":"set4"},
+      {"name":"you","activity":"Non-Family Care", "hours": $scope.set5,"counter":"set5"},
+      {"name":"you","activity":"Working and Commuting","hours": $scope.set6,"counter":"set6"},
+      {"name":"you","activity":"Education","hours": $scope.set7,"counter":"set7"},
+      {"name":"you","activity":"Civic and Religious Activity","hours": $scope.set8,"counter":"set8"},
+      {"name":"you","activity":"Leisure and Sports","hours": $scope.set9,"counter":"set9"},
+      {"name":"you","activity":"E-mail, Phone, and Communications","hours": $scope.set10,"counter":"set10"},
+      {"name":"you","activity":"All Other Activities","hours": $scope.set11,"counter":"set11"}
     ]
 
     $scope.totalHours = $scope.set0 + $scope.set1 + $scope.set2 + $scope.set3 + $scope.set4 + $scope.set5 + $scope.set6 + $scope.set7 + $scope.set8 + $scope.set9 + $scope.set10 + $scope.set11

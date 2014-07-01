@@ -1,7 +1,7 @@
 [{
   "Personal care activities": [
     {
-      "activity": "Personal care activities",
+      "activity": "Sleeping and Grooming",
       "nested": "Sleeping, grooming, health-related self care, personal activites, travel related to personal care",
       "average hours total": "9.54",
       "average hours men": "9.31",
@@ -20,7 +20,7 @@
       "engaged weekend": "10.11"
     }
   ],
-  "Eating and drinking": [
+  "Eating and Drinking": [
     {
       "activity": "Eating and drinking",
       "nested": "Eating and drinking, travel related to eating and drinking",
@@ -41,7 +41,7 @@
       "engaged weekend": "1.44"
     }
   ],
-  "Household activities": [
+  "Housekeeping": [
     {
       "activity": "Household activities",
       "nested": "Housework, food preparation and cleanup, lawn and garden care, household management, interior maintenance, repair, and decoration, exterior maintenance, repair and decoration, animals and pets, vehicles, appliances, tools, and toys, travel related to household activities",
@@ -62,7 +62,7 @@
       "engaged weekend": "2.77"
     }
   ],
-  "Purchasing goods and services": [
+  "Shopping": [
     {
       "activity": "Purchasing goods and services",
       "nested": "Consumer goods purchases, grocery shopping, professional and personal care services, financial services and banking, medical and care services, personal care services, household servies, home maintenance, repair, decoration, and construction (not done by self), vehicle maintenance and repair services (not done by self), government services, travel related to purchasing goods and services",
@@ -83,7 +83,7 @@
       "engaged weekend": "1.93"
     }
   ],
-  "Caring for and helping household members": [
+  "Child and Family Care": [
     {
       "activity": "Caring for and helping household members",
       "nested": "Caring for and helping household children, caring for and helping household adults, travel related to caring for and helping household members",
@@ -104,7 +104,7 @@
       "engaged weekend": "2.07"
     }
   ],
-  "Caring for and helping nonhousehold members": [
+  "Non-Family Care": [
     {
       "activity": "Caring for and helping nonhousehold members",
       "nested": "Travel related to caring for and helping nonhousehold members",
@@ -125,7 +125,7 @@
       "engaged weekend": "1.68"
     }
   ],
-  "Working and work-related activities": [
+  "Working and Commuting": [
     {
       "activity": "Working and work-related activities",
       "nested": "working, work-related activites, other income-generating activites, job search and interviewing, travel related to work",
@@ -146,7 +146,7 @@
       "engaged weekend": "5.63"
     }
   ],
-  "Educational activities": [
+  "Education": [
     {
       "activity": "Educational activities",
       "nested": "Attending class, homework and research, travel related to education",
@@ -167,7 +167,7 @@
       "engaged weekend": "3.50"
     }
   ],
-  "Organizational, civic, and religious activities": [
+  "Civic and Religious Activity": [
     {
       "activity": "Organizational, civic, and religious activities",
       "nested": "Religious and spiritual activites, volunteering, travel related to organizational, civic, and religious activities",
@@ -188,7 +188,7 @@
       "engaged weekend": "2.79"
     }
   ],
-  "Leisure and sports": [
+  "Leisure and Sports": [
     {
       "activity": "Leisure and sports",
       "nested": "socializing, relaxing, and leisure, sports, exercise, and recreation",
@@ -209,7 +209,7 @@
       "engaged weekend": "6.68"
     }
   ],
-  "Telephone calls, mail, and e-mail": [
+  "The Internet and Communications": [
     {
       "activity": "Telephone calls, mail, and e-mail",
       "nested": "Phone calls, household and personal messages (mail and e-mail), travel related to phone calls",
@@ -230,7 +230,7 @@
       "engaged weekend": ".75"
     }
   ],
-  "Other activities, not elsewhere classified": [
+  "All Other Activites": [
     {
       "activity": "Other activities, not elsewhere classified",
       "average hours total": ".31",

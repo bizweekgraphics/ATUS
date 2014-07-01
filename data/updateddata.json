@@ -1,6 +1,6 @@
 [
     {
-        "activity": "Personal care activities",
+        "activity": "Sleeping and Grooming",
         "nested": "Sleeping, grooming, health-related self care, personal activites, travel related to personal care",
         "Average American": "9.54",
         "Men": "9.31",
@@ -65,7 +65,7 @@
         "Bachelor's degree and higher": 9.15
     },
     {
-        "activity": "Eating and drinking",
+        "activity": "Eating and Drinking",
         "nested": "Eating and drinking, travel related to eating and drinking",
         "Average American": "1.23",
         "Men": "1.26",
@@ -130,7 +130,7 @@
         "Bachelor's degree and higher": 1.39
     },
     {
-        "activity": "Household activities",
+        "activity": "Housekeeping",
         "nested": "Housework, food preparation and cleanup, lawn and garden care, household management, interior maintenance, repair, and decoration, exterior maintenance, repair and decoration, animals and pets, vehicles, appliances, tools, and toys, travel related to household activities",
         "Average American": "1.78",
         "Men": "1.34",
@@ -195,7 +195,7 @@
         "Bachelor's degree and higher": 1.79
     },
     {
-        "activity": "Purchasing goods and services",
+        "activity": "Shopping",
         "nested": "Consumer goods purchases, grocery shopping, professional and personal care services, financial services and banking, medical and care services, personal care services, household servies, home maintenance, repair, decoration, and construction (not done by self), vehicle maintenance and repair services (not done by self), government services, travel related to purchasing goods and services",
         "Average American": ".75",
         "Men": ".63",
@@ -260,7 +260,7 @@
         "Bachelor's degree and higher": 0.84
     },
     {
-        "activity": "Caring for/helping household members",
+        "activity": "Child and Family Care",
         "nested": "Caring for and helping household children, caring for and helping household adults, travel related to caring for and helping household members",
         "Average American": ".53",
         "Men": ".36",
@@ -325,7 +325,7 @@
         "Bachelor's degree and higher": 0.69
     },
     {
-        "activity": "Caring for/helping non-household members",
+        "activity": "Non-Family Care",
         "nested": "Travel related to caring for and helping nonhousehold members",
         "Average American": ".19",
         "Men": ".17",
@@ -390,7 +390,7 @@
         "Bachelor's degree and higher": 0.17
     },
     {
-        "activity": "Working and work-related activities",
+        "activity": "Working and Commuting",
         "nested": "working, work-related activites, other income-generating activites, job search and interviewing, travel related to work",
         "Average American": "3.46",
         "Men": "4.20",
@@ -455,7 +455,7 @@
         "Bachelor's degree and higher": 4.4
     },
     {
-        "activity": "Educational activities",
+        "activity": "Education",
         "nested": "Attending class, homework and research, travel related to education",
         "Average American": ".48",
         "Men": ".47",
@@ -520,7 +520,7 @@
         "Bachelor's degree and higher": 0.14
     },
     {
-        "activity": "Organizational civic and religious activities",
+        "activity": "Civic and Religious Activity",
         "nested": "Religious and spiritual activites, volunteering, travel related to organizational, civic, and religious activities",
         "Average American": ".32",
         "Men": ".29",
@@ -585,7 +585,7 @@
         "Bachelor's degree and higher": 0.4
     },
     {
-        "activity": "Leisure and sports",
+        "activity": "Leisure and Sports",
         "nested": "socializing, relaxing, and leisure, sports, exercise, and recreation",
         "Average American": "5.26",
         "Men": "5.61",
@@ -650,7 +650,7 @@
         "Bachelor's degree and higher": 4.57
     },
     {
-        "activity": "Telephone calls, mail, and email",
+        "activity": "E-mail, Phone, and Communications",
         "nested": "Phone calls, household and personal messages (mail and e-mail), travel related to phone calls",
         "Average American": ".15",
         "Men": ".10",
@@ -715,7 +715,7 @@
         "Bachelor's degree and higher": 0.18
     },
     {
-        "activity": "Other activities not elsewhere classified",
+        "activity": "All Other Activites",
         "Average American": ".31",
         "Men": ".27",
         "Women": ".35",
