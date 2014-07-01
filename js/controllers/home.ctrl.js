@@ -133,7 +133,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter
     var asterisks = []
     $('.average-slider').each(function(index, item) {
       var asterisk = false
-      var value = parseFloat($scope.averageData[index].hours).toFixed(2)
+      var value = parseFloat($scope.averageData[index].hours)
       if(isNaN(value)) {
         value = 0
         asterisks.push('*')
