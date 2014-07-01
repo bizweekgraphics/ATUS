@@ -113,7 +113,7 @@ f}
 .slider {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: -17px;
+  /*margin-bottom: -17px;*/
 }
 
 .average-slider {

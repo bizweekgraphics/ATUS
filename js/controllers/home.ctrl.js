@@ -1,6 +1,6 @@
 app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function($scope, d3Service, $http, $timeout) {
 
-  $scope.activity = 0
+  $scope.activity = 0.00
   $scope.set0 = 0
   $scope.set1 = 0
   $scope.set2 = 0
@@ -40,6 +40,26 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   }
 
+    $scope.updateAverageGraph = function() {
+
+    var elArray = []
+    $('option').each(function(index, el) {
+      elementId = $(el).text()
+      if(el.selected && !/All/.test(elementId)) {
+        elArray.push(elementId)
+      }
+    })
+
+    if(elArray[0] === "Men" || elArray[0] === "Women") {
+      elArray = elArray.reverse()
+    }
+
+    var query = elArray.length > 0 ? elArray.join(' ') : 'Average American'
+
+    $scope.updateAverage(query)
+
+  }
+
   $scope.checkHours = function() {
     return $scope.totalHours != 24
   }
@@ -52,6 +72,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   // $scope.labels = false
 
   $scope.showGraph = function() {
+    $scope.showAverage()
     $('.average-slider').attr('disabled', true)
     $scope.displayGraph = true
     $scope.labels = false
@@ -90,10 +111,10 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   }
 
 
-  setInterval(function() {
-    $scope.showAverage()
-    $scope.showPersonal()
-  }, 0)
+  // setInterval(function() {
+  //   $scope.showAverage()
+  //   $scope.showPersonal()
+  // }, 0)
 
   $scope.showAverage = function() {
     $('.average-slider').each(function(index, item) {
@@ -109,18 +130,23 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
 
   $scope.showPersonal = function() {
     $('.slider').each(function(index, item) {
-    var value = parseFloat($scope.personalData[index].hours)
-    $(item).val(value)
-    var hoursText = $($('.hours')[index])
-    hoursText.text(value)
-    var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
-    hoursText.css('right', right + '%')
+      var value = parseFloat($scope.personalData[index].hours)
+      $(item).val(value)
+      var hoursText = $($('.hours')[index])
+      hoursText.text(value)
+      var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
+      hoursText.css('right', right + '%')
     })
   }
 
   $scope.$watch('averageData', function(newValue, oldValue) {
     $scope.showAverage()
   })
+
+  // $scope.$watch('personalData', function(newValue, oldValue) {
+  //   console.log(newValue)
+  //   $scope.showPersonal()
+  // })
 
   $scope.filterGraph = function(group) {
     group = group.trim()
@@ -145,6 +171,21 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
       $scope.four = $scope.personalData.slice(9, 12)
 
       init()
+    })
+  }
+
+  $scope.updateAverage = function(group) {
+    group = group.trim()
+    $http.get('data/updateddata.json')
+    .then(function(res) {
+      $scope.averageData = []
+      counter = 0
+      angular.forEach(res.data, function(obj) {
+        var counterVal = "set" + counter
+        counter += 1
+        $scope.averageData.push({name: "ATUS", nested: obj.nested, activity: obj.activity, hours: obj[group], counter: counterVal, nested: obj.nested})
+      })
+      $scope.showAverage()
     })
   }
 

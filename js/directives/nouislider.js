@@ -25,7 +25,8 @@ app.directive('slider', function() {
                     ngModel.$setViewValue(value);
                     scope.$parent.$parent.setData(elem.attr('counter'), $(elem).val())
                   })
-                }).on('set', function() {
+                })
+                .on('set', function() {
                   if($(elem).val() >=12) {
                     var value = 12.00
                     $(elem).val(12.00)
@@ -34,6 +35,9 @@ app.directive('slider', function() {
                   }
                     var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
                   $(elem).prev().css('right', right + '%')
+                  ngModel.$setViewValue(value);
+                  console.log($(elem).val())
+                  scope.$parent.$parent.setData(elem.attr('counter'), $(elem).val())
                 })
 
                 ngModel.$render = function() {

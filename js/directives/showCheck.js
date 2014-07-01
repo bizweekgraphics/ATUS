@@ -27,7 +27,7 @@ app.directive('showCheck', function() {
 
           var elementChecked = /All/.test(elementId) ? false : element.selected
 
-          scope.$parent.updateGraph()
+          scope.$parent.updateAverageGraph()
           $('select').attr('disabled', false)
           if(checkedArray.length > 0) {
             checkedArray.forEach(function(elClass) {
