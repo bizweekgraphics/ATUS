@@ -1,13 +1,15 @@
 <div class="inline-block quarter">
   <div class="slide-container" ng-repeat="datum in data">
+    <div ng-mouseenter= "updateImg($event, datum)">
     <p tooltip-placement="bottom" tooltip="{{data[$index].nested}}">{{datum.activity}}</p>
-    <div ng-mouseenter= "updateImg($event, datum)"  class="slide-box">
+    <div class="slide-box">
       <span class="hours">{{activity | number:2}}</span>
       <div slider class="slider" counter="{{datum.counter}}" ng-model="activity"></div>
       <div ng-hide="hideAverage">
         <span class="average-hours"></span>
         <div slider class="average-slider" ng-model="activity"></div>
       </div>
+    </div>
     </div>
 
   </div>

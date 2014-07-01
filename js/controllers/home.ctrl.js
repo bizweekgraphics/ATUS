@@ -104,9 +104,13 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     $scope.hoursRemaining = Math.abs($scope.totalHours - 24)
     
     if($scope.totalHours < 24) {
+      $scope.showHours = true
       $scope.more = true
     } else if ($scope.totalHours > 24) {
+      $scope.showHours = true
       $scope.more = false
+    } else {
+      $scope.showHours = false
     }
 
 
@@ -121,19 +125,22 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.showAverage = function() {
     var asterisks = []
     $('.average-slider').each(function(index, item) {
+      var asterisk = false
       var value = parseFloat($scope.averageData[index].hours).toFixed(2)
       if(isNaN(value)) {
-        value = '*'
+        value = 0
+        asterisks.push('*')
+        asterisk = true
+        var right = -7.5
       }
       $(item).val(value)
       var hoursText = $($('.average-hours')[index])
-      hoursText.text(value)
-      if(value === "*") {
-        asterisks.push('*')
-        var right = -10.5
+      if(asterisk === true) {
+        value = '*'
       } else {
-        var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78      
+       var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78    
       }
+      hoursText.text(value)
       hoursText.css('right', right + '%')
     })
     $scope.asterisk = asterisks.length > 0
