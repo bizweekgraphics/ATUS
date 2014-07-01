@@ -24,7 +24,13 @@ app.directive('slider', function() {
                     $(elem).prev().css('right', right + '%')
                     ngModel.$setViewValue(value);
                     scope.$parent.$parent.setData(elem.attr('counter'), $(elem).val())
-                    $(elem).parent().children('.handle').css('left', -right + '%')
+                    var handle = $(elem).parent().children('.handle')
+                    handle.css('left', -right + '%')
+                    if(value === 12) {
+                      handle.css('border-radius', '0% 50% 50% 0%')
+                    } else {
+                      handle.css('border-radius', '50%')
+                    }
                   })
                 })
                 .on('set', function() {
