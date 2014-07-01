@@ -178,13 +178,41 @@ f}
   /*margin: 0 auto;*/
 }
 
+
+
+.select-wrapper checkboxes p {
+  text-align: left;
+  margin-left: 13px;
+}
+
 .select-wrapper checkboxes{
   width: 300px;
-  padding-right: 30px;
-  /*padding: 0px 10px 0px 10px;*/
+  /*padding-right: 30px;*/
+  padding: 0px 20px 0px 20px;
   float: none;
   display: table-cell; 
   vertical-align: top;
+  text-align: center;
+}
+
+#first-check {
+  text-align: left;
+  padding: 0px;
+}
+
+#last-check {
+  text-align: right;
+  padding: 0px;
+}
+
+#first-check p {
+  text-align: left;
+  margin-left: 0px;
+}
+
+#last-check p {
+  text-align: left;
+  margin-left: 35px;
 }
 
 .select-wrapper checkboxes:last-child {
