@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="clockman">
-    <span id="clockman-time">{{totalHours | parseHours}}</span>
+    <span id="clockman-time">{{hours}}<span class="blink">:</span>{{minutes}}</span>
     <img id="clockman-img" src="img/main.png"></img>
   </div>
 
@@ -10,7 +10,6 @@
     <slider data="three" hide="hideAverage" activity="activity"></slider>
     <slider data="four" hide="hideAverage" activity="activity"></slider>
   </div>
-  <span ng-show="asterisk" class="asterisk">*Estimate is suppressed because it does not meet the American Time Use Survey publication standards</span>
 
 
 <br>
@@ -26,13 +25,16 @@
 <br>
 </div>
 
-<div ng-show="labels" class="select-wrapper">
+<div ng-hide="labels" class="select-wrapper">
   <checkboxes id="first-check" first="firstGender" group="gender"></checkboxes>
   <checkboxes first="firstAge" group="age"></checkboxes>
   <checkboxes first="firstRace" group="race"></checkboxes>
   <checkboxes first="firstEducation" group="education"></checkboxes>
   <checkboxes id="last-check" first="firstDay" group="day"></checkboxes>
 </div>
+
+<span ng-show="asterisk" class="asterisk">*Estimate is suppressed because it does not meet the American Time Use Survey publication standards</span>
+
 
 
 </div>

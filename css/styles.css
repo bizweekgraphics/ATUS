@@ -80,7 +80,7 @@ f}
   color: white;
   margin: .5em;
   text-align: center;
-  height: 10px;
+  height: 0px;
 }
 
 
@@ -130,7 +130,8 @@ f}
 }
 
 .asterisk {
-  float: right;
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 .enable-time {
@@ -260,4 +261,15 @@ select {
 option {
   background: black !important;
   color: #0f0;
+}
+
+.blink {
+  animation: blink 1s steps(3, start) infinite;
+  -webkit-animation: blink 1s steps(3, start) infinite;
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+@-webkit-keyframes blink {
+  to { visibility: hidden; }
 }

@@ -1,4 +1,4 @@
-app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function($scope, d3Service, $http, $timeout) {
+app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter', function($scope, d3Service, $http, $timeout ,$filter) {
 
   $scope.activity = 0.00
   $scope.set0 = 0
@@ -22,6 +22,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   }
 
   $scope.totalHours = 0
+
 
   $scope.updateGraph = function() {
 
@@ -100,6 +101,12 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
     ]
 
     $scope.totalHours = $scope.set0 + $scope.set1 + $scope.set2 + $scope.set3 + $scope.set4 + $scope.set5 + $scope.set6 + $scope.set7 + $scope.set8 + $scope.set9 + $scope.set10 + $scope.set11
+
+
+
+    var parsedHours = $filter('parseHours')($scope.totalHours)
+    $scope.hours = parsedHours.slice(0,2)
+    $scope.minutes = parsedHours.slice(3,5)
     
     $scope.hoursRemaining = Math.abs($scope.totalHours - 24)
     

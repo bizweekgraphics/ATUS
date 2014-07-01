@@ -24,13 +24,17 @@ border-radius: 20px !important;
 }
 
 .noUi-base:before {
-  /*content: '0';*/
+  content: '';
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%; 
+  width: 36px;
+  height: 36px;
+  background: #0f0;
   /*position: relative;*/
   position: absolute;
   font-family: sans-serif;
   /*font-size: 1.5em;*/
-  bottom: -120%;
-  left: 0%;
+  left: -21px;
 }
 
 .noUi-base:after {
@@ -226,4 +230,17 @@ border-radius: 20px !important;
   transition: background 450ms;
 }
 
+.average-slider .noUi-base:before {
+  content: '';
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%; 
+  width: 36px;
+  height: 36px;
+  background: white;
+  /*position: relative;*/
+  position: absolute;
+  font-family: sans-serif;
+  /*font-size: 1.5em;*/
+  left: -21px;
+}
 
