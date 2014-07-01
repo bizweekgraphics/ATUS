@@ -145,7 +145,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter
       if(asterisk === true) {
         value = '*'
       } else {
-       var right = value == 0 ? -9.5: (value/12) * -70 - 7
+       var right = value == 0 ? -9.5: (value/12) * -70 - 8
       }
       hoursText.text(value)
       hoursText.css('right', right + '%')
@@ -160,7 +160,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter
       $(item).val(value)
       var hoursText = $($('.hours')[index])
       hoursText.text(value)
-      var right = value == 0 ? -9.5: (value/12) * -70 - 7
+      var right = value == 0 ? -9.5: (value/12) * -70 - 8
       hoursText.css('right', right + '%')
     })
   }
