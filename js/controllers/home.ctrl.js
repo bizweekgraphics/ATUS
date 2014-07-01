@@ -138,14 +138,14 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter
         value = 0
         asterisks.push('*')
         asterisk = true
-        var right = -7.5
+        var right = -14.25
       }
       $(item).val(value)
       var hoursText = $($('.average-hours')[index])
       if(asterisk === true) {
         value = '*'
       } else {
-       var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78    
+       var right = value == 0 ? -9.5: (value/12) * -70 - 7
       }
       hoursText.text(value)
       hoursText.css('right', right + '%')
@@ -159,7 +159,7 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', '$filter
       $(item).val(value)
       var hoursText = $($('.hours')[index])
       hoursText.text(value)
-      var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
+      var right = value == 0 ? -9.5: (value/12) * -70 - 7
       hoursText.css('right', right + '%')
     })
   }
