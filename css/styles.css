@@ -97,7 +97,7 @@ f}
   font-family: 'BWHaasRegular';
   position: relative;
   right: -2%;
-  top: 29px;
+  top: 12px;
   z-index: 100;
 }
 
@@ -119,11 +119,16 @@ f}
 .average-slider {
   width: 80%;
   margin: 0 auto;
+  margin-top: -17px;
 }
 
 
 .clear {
   clear: both;
+}
+
+.asterisk {
+  float: right;
 }
 
 .enable-time {

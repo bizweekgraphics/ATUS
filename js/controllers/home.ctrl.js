@@ -14,6 +14,8 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   $scope.set10 = 0
   $scope.set11 = 0
 
+  $scope.asterisk = false
+
 
   function init() {
     $scope.setData()
@@ -117,15 +119,24 @@ app.controller('HomeCtrl', ['$scope', 'd3Service', '$http', '$timeout', function
   // }, 0)
 
   $scope.showAverage = function() {
+    var asterisks = []
     $('.average-slider').each(function(index, item) {
-      var value = parseFloat($scope.averageData[index].hours)
+      var value = parseFloat($scope.averageData[index].hours).toFixed(2)
+      if(isNaN(value)) {
+        value = '*'
+      }
       $(item).val(value)
       var hoursText = $($('.average-hours')[index])
       hoursText.text(value)
-      var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78
+      if(value === "*") {
+        asterisks.push('*')
+        var right = -10.5
+      } else {
+        var right = value <= 1.5 ? (value/12) * -100 - 2: (value/12) * -78      
+      }
       hoursText.css('right', right + '%')
     })
-
+    $scope.asterisk = asterisks.length > 0
   }
 
   $scope.showPersonal = function() {
