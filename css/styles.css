@@ -213,9 +213,9 @@
 }
 
 .select-wrapper checkboxes{
-  width: 300px;
+  width: 290px;
   /*padding-right: 30px;*/
-  padding: 0px .1em 0px .1em;
+  padding: 0px .3em 0px .3em;
   float: none;
   display: table-cell; 
   vertical-align: top;
@@ -239,7 +239,7 @@
 
 #last-check p {
   text-align: left;
-  margin-left: 35px;
+  margin-left: 25px;
 }
 
 .select-wrapper checkboxes:last-child {
