@@ -80,7 +80,7 @@ f}
   color: white;
   margin: .5em;
   text-align: center;
-  height: 0px;
+  height: 10px;
 }
 
 
@@ -88,7 +88,7 @@ f}
   font-family: 'BWHaasRegular';
   position: relative;
   right: -9.5%;
-  top: 29px;
+  top: 19px;
   z-index: 100;
   font-size: 13px;
 }
@@ -116,6 +116,7 @@ f}
   width: 70%;
   /*margin: 0 auto;*/
   margin-left: 40px;
+  margin-top: -10px;
   /*margin-bottom: -17px;*/
 }
 
