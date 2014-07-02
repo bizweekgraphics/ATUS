@@ -68,12 +68,12 @@
 }
 
 .slide-container {
-  margin-bottom: .5em;
+  margin-bottom: .25em;
   background: black;
   border: 1px solid #0f0;
   border-radius: 10px;
-  padding-bottom: 10px;
-  min-height: 85px;
+  padding:0px 0px 18px 0px;
+  /*min-height: 85px;*/
 }
 
 .slide-container p {
@@ -81,10 +81,16 @@
   margin: .5em;
   text-align: center;
   height: 10px;
+  margin-top: 15px;
 }
+
 
 .slide-box {
   margin-top: -40px;
+}
+
+.cat-tooltip {
+  color: lightgrey;
 }
 
 
