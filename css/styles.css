@@ -209,13 +209,13 @@
 
 .select-wrapper checkboxes p {
   text-align: left;
-  margin-left: 13px;
+  margin-left: 3px;
 }
 
 .select-wrapper checkboxes{
   width: 290px;
   /*padding-right: 30px;*/
-  padding: 0px .3em 0px .3em;
+  padding-right: .3em;
   float: none;
   display: table-cell; 
   vertical-align: top;
@@ -224,7 +224,6 @@
 
 #first-check {
   text-align: left;
-  padding: 0px;
 }
 
 #last-check {
@@ -239,7 +238,7 @@
 
 #last-check p {
   text-align: left;
-  margin-left: 25px;
+  margin-left: 5px;
 }
 
 .select-wrapper checkboxes:last-child {
@@ -248,7 +247,7 @@
 
 .label-left {
   margin-left: 10px;
-  width: 190px;
+  width: 194px;
   float:left;
 }
 
@@ -279,7 +278,7 @@ select {
   color: white !important;
   border: 1px solid #0f0;
   /*border-radius: 20%;*/
-  width: 12.13em;
+  width: 190px;
   height: 3em;
   /*margin-left: .5em;*/
 }
