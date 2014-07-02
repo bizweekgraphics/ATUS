@@ -43,7 +43,6 @@ app.directive('slider', function() {
                     var right = value == 0 ? -9.5 : (value/12) * -70 - 7
                   $(elem).prev().css('right', right + '%')
                   ngModel.$setViewValue(value);
-                  console.log($(elem).val())
                   scope.$parent.$parent.setData(elem.attr('counter'), $(elem).val())
                   $(elem).parent().children('.handle').css('left', -right + '%')
 
