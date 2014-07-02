@@ -153,7 +153,7 @@ border-radius: 20px !important;
 }
 .noUi-handle {
   -webkit-border-radius: 50%;
-  -mox-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   border: 1px solid #0f0;
   background: #0f0;
@@ -222,7 +222,7 @@ border-radius: 20px !important;
 
 .average-slider .noUi-handle {
   -webkit-border-radius: 50%;
-  -mox-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
   border: 1px solid white;
   background: white;

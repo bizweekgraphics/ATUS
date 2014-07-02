@@ -4,6 +4,15 @@
     <img id="clockman-img" src="img/main.png"></img>
   </div>
 
+  <div class="legend-wrapper">
+      <div class="legend-item">
+        <div id="green"></div><span>Your Time Use</span>
+      </div>
+      <div class="legend-item" ng-hide="labels">
+        <div id="white"></div><span>Average American Time Use</span>
+      </div>
+  </div>
+
   <div class="slide-wrapper">
     <slider data="one" hide="hideAverage" activity="activity"></slider>
     <slider data="two" hide="hideAverage" activity="activity"></slider>

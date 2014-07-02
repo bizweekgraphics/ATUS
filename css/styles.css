@@ -62,6 +62,48 @@
   text-align: center;
 }
 
+.legend-wrapper {
+  margin-top: 7px;
+}
+
+
+.legend-wrapper div {
+  display: inline-block;
+}
+
+.legend-item {
+  margin-right: 30px;
+}
+
+.legend-wrapper span {
+  margin-left: 5px;
+  font-family: 'BWHaasRegular';
+}
+
+
+
+#green {
+  top: 2px;
+  position: relative;
+  content: '';
+  background: #0f0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+#white {
+  top: 2px;
+  position: relative;
+  content: '';
+  background: white;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
 .slide-wrapper {
   width: 970px;
   margin-top: 5px;
